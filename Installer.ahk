@@ -231,7 +231,7 @@ Buttonrandomad1.png:
 Gui, Tab, 2
 ;Gui Add, Picture, x150 y150 , Image installer\img\randomok1.png
 ScreenCapture(location:="clipboard")
-SaveClipImgToFile("img/randomok1.png")
+SaveClipImgToFile("img/randomad1.png")
 Sleep, 3000
 MsgBox, Saved randomad1.png
 Reload
@@ -242,7 +242,7 @@ Buttonrandomad2.png:
 Gui, Tab, 2
 ;Gui Add, Picture, x150 y150 , Image installer\img\randomok1.png
 ScreenCapture(location:="clipboard")
-SaveClipImgToFile("img/randomok2.png")
+SaveClipImgToFile("img/randomad2.png")
 Sleep, 3000
 MsgBox, Saved randomad2.png
 Reload
