@@ -1,12 +1,15 @@
 # Pokemon Masters Bot-It v0.3
 Youtube:
 
+**Co-Op Run**
+[![Co-op run](https://i9.ytimg.com/vi/W-u14v51vLI/mq2.jpg?sqp=CJirw-sF&rs=AOn4CLBmvKQj34CzSB0fLOE6vMS4QCF5mQ)](https://youtu.be/W-u14v51vLI "Co-op run - Click to Watch!")
 
-[![Co-op run](https://i9.ytimg.com/vi/eImujvM4V3Q/mq2.jpg?sqp=CJirw-sF&rs=AOn4CLC9MpJDm7zjXs6fM7S6dAXgs1nG_w)](https://youtu.be/W-u14v51vLI "Co-op ru - Click to Watch!")
 
+**Installer show**
+[![Installer show](https://i9.ytimg.com/vi/BYHvAxWxoWE/mq1.jpg?sqp=CMStw-sF&rs=AOn4CLCpS6QxJAgzWodlg__B70-42cVW3w)](https://youtu.be/BYHvAxWxoWE "Installer show - Click to Watch!")
 
-
-https://youtu.be/W-u14v51vLI
+**Full Core Install**
+[![Full Core Installn](https://i9.ytimg.com/vi/eImujvM4V3Q/mq2.jpg?sqp=CJirw-sF&rs=AOn4CLC9MpJDm7zjXs6fM7S6dAXgs1nG_w)](https://youtu.be/eImujvM4V3Q "Full Core Install - Click to Watch!")
 
 "Installer show"
 https://youtu.be/BYHvAxWxoWE
