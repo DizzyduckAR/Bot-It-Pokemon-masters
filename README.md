@@ -1,4 +1,9 @@
 # Pokemon Masters Bot-It v0.3
+
+Fully portable come with installer to easy screen the images while bot is running.
+no data saved / no data sent
+If *.exe give you false anti viruse you can download the *.exe from autohotkey and rename it to the script name it only run the code..
+
 Youtube:
 
 **Co-Op Run**
