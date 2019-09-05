@@ -1,4 +1,6 @@
-# AutoMirror
+# Pokemon Masters Bot-It v0.3
+
+
 
 02/09/19 Added AutoMirror win7 fix for no powerShell systems.
 
