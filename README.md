@@ -6,16 +6,16 @@ Youtube:
 
 
 **Installer show**
+
+
 [![Installer show](https://i9.ytimg.com/vi/BYHvAxWxoWE/mq1.jpg?sqp=CMStw-sF&rs=AOn4CLCpS6QxJAgzWodlg__B70-42cVW3w)](https://youtu.be/BYHvAxWxoWE "Installer show - Click to Watch!")
 
 **Full Core Install**
+
+
 [![Full Core Installn](https://i9.ytimg.com/vi/eImujvM4V3Q/mq2.jpg?sqp=CJirw-sF&rs=AOn4CLC9MpJDm7zjXs6fM7S6dAXgs1nG_w)](https://youtu.be/eImujvM4V3Q "Full Core Install - Click to Watch!")
 
-"Installer show"
-https://youtu.be/BYHvAxWxoWE
 
-"Full Core Install"
-https://youtu.be/eImujvM4V3Q
 
 
 Hotkey:
