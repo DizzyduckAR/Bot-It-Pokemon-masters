@@ -1,6 +1,8 @@
 # Pokemon Masters Bot-It v0.3
 Youtube:
 
+
+[Co-op run](https://youtu.be/W-u14v51vLI)
 "Coop run"
 https://youtu.be/W-u14v51vLI
 
