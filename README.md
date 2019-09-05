@@ -12,8 +12,11 @@ https://youtu.be/eImujvM4V3Q
 
 
 Hotkey:
+
 esc - cancel pic crop
+
 F2  - target bot it 
+
 F8 - Kill all bot
 
 PC
