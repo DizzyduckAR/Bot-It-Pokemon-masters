@@ -3,7 +3,7 @@
 ; https://github.com/DizzyduckAR/AutoMirror/
 ; Clipper by ralesi 
 
-#Include Core/func.ahk
+#Include Core\func.ahk
 
 
 SetWorkingDir %A_ScriptDir%
@@ -140,6 +140,8 @@ If (menuChoice = "Levelup")
 		
 		Randomlist()
 		
+		Failsafe1()
+		
 		Random, SleepAmount, 1450, 2250
 		Sleep, %SleepAmount%
 		Sleep, %SleepAmount%
@@ -232,6 +234,7 @@ If (menuChoice = "Strike")
 		
 		Randomad2()
 		Randomlist()
+	     Failsafe1()
 		;Randoms end
 		
 		
@@ -332,7 +335,7 @@ If (menuChoice = "Tech")
 		
 		Randomad2()
 		Randomlist()
-		
+		Failsafe1()
 		;Randoms end
 		
 		
@@ -430,6 +433,7 @@ If (menuChoice = "Support")
 		
 		Randomad2()	
 		Randomlist()
+		Failsafe1()
 		;Randoms end
 		
 		
@@ -541,7 +545,7 @@ If (menuChoice = "Story COOP")
 		
 		Randomad2()
 		Randomlist()
-		
+		Failsafe1()
 		
 		
 		Random, SleepAmount, 1450, 2250

@@ -6,7 +6,7 @@
 global targetwindow := "No window Picked" ;Window name
 global Options := "o65 Silent r" ; image miss % options 1-254 "o65"
 global Options2 := "o35 Silent r" ; image list miss % options 1-254 "o35"
-#Include Core/FindClick.ahk
+#Include Core\FindClick.ahk
 
 
 
@@ -472,7 +472,7 @@ Randomlist()
 	X_end := (X1 + W) 
 	Y_end :=  (Y1 + H)
 	
-	;Options := "o65 Silent r"
+	
 	ImageList := ["img/rndm/rnd1.png", "img/rndm/rnd2.png", "img/rndm/rnd3.png","img/rndm/rnd4.png", "img/rndm/rnd5.png", "img/rndm/rnd6.png","img/rndm/rnd7.png", "img/rndm/rnd8.png", "img/rndm/rnd9.png"]
 	
 	For key, ImageFile in ImageList
@@ -484,4 +484,26 @@ Randomlist()
 	; Do other stuff each loop, like maybe add a sleep
 	}
 	
+}
+
+
+Failsafe1()
+{
+	
+	WinGetPos, X, Y, Width, Height, %targetwindow% 
+	X1 := X
+	Y1 := Y
+	W := Width
+	H := Height
+	X_end := (X1 + W) 
+	Y_end :=  (Y1 + H)
+	
+	If FindClick("img/failsafe1.png", Options) ; fill in the options
+	{
+		FindClick("img/failsafe1.png", Options)
+		sleep, 35000
+		FindClick("img/failsafe2.png", Options)
+		
+		
+	}
 }

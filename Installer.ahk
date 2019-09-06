@@ -34,8 +34,9 @@ Gui Add, Button, x382 y38 w80 h23 Vpic13, 1random1.png
 Gui Add, Button, x382 y70 w80 h23 Vpic14, randomstage1.png
 Gui Add, Button, x382 y102 w80 h23 Vpic15, randomstart1.png
 Gui Add, Button, x382 y134 w80 h23 Vpic16, randomok1.png
-Gui Add, Button, x382 y198 w80 h23 Vpic17, randomad1.png
-Gui Add, Button, x382 y230 w80 h23 Vpic18, randomad2.png
+Gui Add, Button, x382 y178 w80 h23 Vpic17, rnd.png
+Gui Add, Button, x382 y230 w80 h23 Vpic18, failsafe1.png
+Gui Add, Button, x382 y255 w80 h23 Vpic19, failsafe2.png
 Gui Add, Text, x26 y4 w423 h23 +0x200, Built in Screen Clipper.  Target the area just like the exemple image on Mirror/Emu
 Gui Add, Text, x10 y340 w366 h23 +0x200, Press Button see exemple image and Crop the area with Left mouse click
 Gui Add, Text, x119 y41 w61 h22 +0x200, Crop Target
@@ -226,28 +227,38 @@ MsgBox, Saved randomok1.png
 Reload
 return
 
-Buttonrandomad1.png:
-;Gui Add, Picture, x9 y31 w246 h292, Image installer\7.png
+Buttonrnd.png:
+
 Gui, Tab, 2
-;Gui Add, Picture, x150 y150 , Image installer\img\randomok1.png
+;Gui Add, Picture, x150 y150 , Image installer\img\rndm\rnd1.png
 ScreenCapture(location:="clipboard")
-SaveClipImgToFile("img/randomad1.png")
+SaveClipImgToFile("img/rnd.png")
 Sleep, 3000
-MsgBox, Saved randomad1.png
+MsgBox, Saved You muse set name in \img\rndm\rnd1-9.png
 Reload
 return
 
-Buttonrandomad2.png:
+Buttonfailsafe1.png:
 ;Gui Add, Picture, x9 y31 w246 h292, Image installer\7.png
 Gui, Tab, 2
-;Gui Add, Picture, x150 y150 , Image installer\img\randomok1.png
+Gui Add, Picture, x150 y150 , Image installer\img\failsafe1.png
 ScreenCapture(location:="clipboard")
-SaveClipImgToFile("img/randomad2.png")
+SaveClipImgToFile("img/failsafe1.png")
 Sleep, 3000
-MsgBox, Saved randomad2.png
+MsgBox, Saved failsafe1.png
 Reload
 return
 
+Buttonfailsafe2.png:
+;Gui Add, Picture, x9 y31 w246 h292, Image installer\7.png
+Gui, Tab, 2
+Gui Add, Picture, x150 y150 , Image installer\img\failsafe2.png
+ScreenCapture(location:="clipboard")
+SaveClipImgToFile("img/failsafe2.png")
+Sleep, 3000
+MsgBox, Saved failsafe2.png
+Reload
+return
 
 Buttonup.png:
 Gui, Tab, 1
