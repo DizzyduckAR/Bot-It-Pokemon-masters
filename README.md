@@ -4,6 +4,17 @@ Fully portable come with installer to easy screen the images while bot is runnin
 no data saved / no data sent
 If *.exe give you false anti viruse you can download the *.exe from autohotkey and rename it to the script name it only run the code..
 
+**Log:
+***Pokemon masters V0.43
+*mouse blink return mouse to start pos
+*random ad killer with 9 autograb images from dir img/rndm/ (anything you screen!!)
+*fail safe added for user getting apk crash bot will reload the app for ya
+*image tracking disable atm did not work as hoped (ai will keep testing it)
+*bot logic is improved
+*bot let you pick and change any event by simple pic take and it on..
+*co-op supported
+*controller delay. might be moving to adb event sooner then expected
+
 Youtube:
 
 **Co-Op Run**
