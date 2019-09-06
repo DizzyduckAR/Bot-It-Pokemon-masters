@@ -1,4 +1,4 @@
-# Pokemon Masters Bot-It v0.3
+# Pokemon Masters Bot-It v0.43
 
 Fully portable come with installer to easy screen the images while bot is running.
 no data saved / no data sent
