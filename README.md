@@ -4,9 +4,9 @@ Fully portable come with installer to easy screen the images while bot is runnin
 no data saved / no data sent
 If *.exe give you false anti viruse you can download the *.exe from autohotkey and rename it to the script name it only run the code..
 
-**Log:
+Log:
 
-***Pokemon masters V0.43
+Pokemon masters V0.43
 
 *mouse blink return mouse to start pos
 
