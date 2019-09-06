@@ -4,10 +4,16 @@
 ; https://github.com/DizzyduckAR/AutoMirror/
 
 global targetwindow := "No window Picked" ;Window name
+global Options := "o65 Silent r" ; image miss % options 1-254 "o65"
+global Options2 := "o35 Silent r" ; image list miss % options 1-254 "o35"
+#Include Core/FindClick.ahk
 
 
 
-Random, SleepAmount, 1450, 3725
+
+
+
+
 
 
 wpos(X1, Y1, X_end, Y_end)
@@ -25,7 +31,7 @@ wpos(X1, Y1, X_end, Y_end)
 
 start()
 {
-	Random, SleepAmount, 1450, 3725
+	
 	WinGetPos, X, Y, Width, Height, %targetwindow% 	
 	X1 := X
 	Y1 := Y
@@ -35,23 +41,15 @@ start()
 	Y_end :=  (Y1 + H)
 	
 	
+	FindClick("img/1.png", Options)
 	
-	coordMode ,Pixel, Screen
-	ImageSearch, FoundX, FoundY, %X1%, %Y1%, %X_end%, %Y_end%, *75 img\1.png 
-	If ErrorLevel = 0
-	{
-		Send {Click %FoundX%, %FoundY%}
-		Sleep, %SleepAmount%
-		Sleep, %SleepAmount%
-		
-		
-	}
+	
 }
 
 
 eventselect()
 {
-	Random, SleepAmount, 1450, 3725
+	
 	
 	WinGetPos, X, Y, Width, Height, %targetwindow% 
 	X1 := X
@@ -61,16 +59,8 @@ eventselect()
 	X_end := (X1 + W) 
 	Y_end :=  (Y1 + H)
 	
-	coordMode ,Pixel, Screen
-	ImageSearch, FoundX, FoundY, %X1%, %Y1%, %X_end%, %Y_end%, *75 img\2.png 
-	If ErrorLevel = 0
-	{
-		Send {Click %FoundX%, %FoundY%}
-		Sleep, %SleepAmount%
-		Sleep, %SleepAmount%
-		
-		
-	}
+	FindClick("img/2.png", Options)
+	
 	
 }	
 
@@ -80,7 +70,7 @@ eventselect()
 
 eventselectrandom1()
 {
-	Random, SleepAmount, 1450, 3725
+	
 	
 	WinGetPos, X, Y, Width, Height, %targetwindow% 	
 	X1 := X
@@ -90,23 +80,18 @@ eventselectrandom1()
 	X_end := (X1 + W) 
 	Y_end :=  (Y1 + H)
 	
-	coordMode ,Pixel, Screen
-	ImageSearch, FoundX, FoundY, %X1%, %Y1%, %X_end%, %Y_end%, *75 img\1random1.png 
-	If ErrorLevel = 0
-	{
-		Send {Click %FoundX%, %FoundY%}
-		Sleep, %SleepAmount%
-		Sleep, %SleepAmount%
-		
-		
-	}
+	
+	FindClick("img/1random1.png", Options)
+	
+	
+	
 	
 }	
 
 
 eventselectrandom2()
 {
-	Random, SleepAmount, 1450, 3725
+	
 	
 	WinGetPos, X, Y, Width, Height, %targetwindow% 
 	X1 := X
@@ -116,14 +101,11 @@ eventselectrandom2()
 	X_end := (X1 + W) 
 	Y_end :=  (Y1 + H)
 	
-	coordMode ,Pixel, Screen
-	ImageSearch, FoundX, FoundY, %X1%, %Y1%, %X_end%, %Y_end%, *75 img\2random1.png 
-	If ErrorLevel = 0
-	{
-		Send {Click %FoundX%, %FoundY%}
-		Sleep, %SleepAmount%
-		
-	}
+	FindClick("img/2random1.png", Options)
+	
+	
+	
+	
 	
 }	
 
@@ -131,7 +113,7 @@ eventselectrandom2()
 
 train1()
 {
-	Random, SleepAmount, 1450, 3725
+	
 	
 	WinGetPos, X, Y, Width, Height, %targetwindow% 
 	X1 := X
@@ -141,20 +123,15 @@ train1()
 	X_end := (X1 + W) 
 	Y_end :=  (Y1 + H)
 	
-	coordMode ,Pixel, Screen
-	ImageSearch, FoundX, FoundY, %X1%, %Y1%, %X_end%, %Y_end%, *75 img\3.png 
-	If ErrorLevel = 0
-	{
-		Send {Click %FoundX%, %FoundY%}
-		Sleep, %SleepAmount%
-		
-	}
+	FindClick("img/3.png", Options)
+	
+	
 	
 }	
 
 train4()
 {
-	Random, SleepAmount, 1450, 3725
+	
 	
 	WinGetPos, X, Y, Width, Height, %targetwindow% 
 	X1 := X
@@ -164,21 +141,15 @@ train4()
 	X_end := (X1 + W) 
 	Y_end :=  (Y1 + H)
 	
-	coordMode ,Pixel, Screen
-	ImageSearch, FoundX, FoundY, %X1%, %Y1%, %X_end%, %Y_end%, *75 img\6.png 
-	If ErrorLevel = 0
-	{
-		Send {Click %FoundX%, %FoundY%}
-		Sleep, %SleepAmount%
-		Sleep, %SleepAmount%
-		
-	}
+	FindClick("img/6.png", Options)
+	
+	
 	
 }	
 
 train2()
 {
-	Random, SleepAmount, 1450, 3725
+	
 	
 	WinGetPos, X, Y, Width, Height, %targetwindow% 
 	X1 := X
@@ -188,21 +159,16 @@ train2()
 	X_end := (X1 + W) 
 	Y_end :=  (Y1 + H)
 	
-	coordMode ,Pixel, Screen
-	ImageSearch, FoundX, FoundY, %X1%, %Y1%, %X_end%, %Y_end%, *85 img\4.png 
-	If ErrorLevel = 0
-	{
-		Send {Click %FoundX%, %FoundY%}
-		Sleep, %SleepAmount%
-		Sleep, %SleepAmount%
-		
-	}
+	
+	FindClick("img/4.png", Options)
+	
+	
 	
 }	
 
 train3()
 {
-	Random, SleepAmount, 1450, 3725
+	
 	
 	WinGetPos, X, Y, Width, Height, %targetwindow% 
 	X1 := X
@@ -212,22 +178,16 @@ train3()
 	X_end := (X1 + W) 
 	Y_end :=  (Y1 + H)
 	
-	coordMode ,Pixel, Screen
-	ImageSearch, FoundX, FoundY, %X1%, %Y1%, %X_end%, %Y_end%, *85 img\5.png 
-	If ErrorLevel = 0
-	{
-		Send {Click %FoundX%, %FoundY%}
-		Sleep, %SleepAmount%
-		Sleep, %SleepAmount%
-		
-	}
+	
+	FindClick("img/5.png", Options)
+	
 	
 }	
 
 
 randomstage1()
 {
-	Random, SleepAmount, 1450, 3725
+	
 	
 	WinGetPos, X, Y, Width, Height, %targetwindow% 
 	X1 := X
@@ -237,21 +197,18 @@ randomstage1()
 	X_end := (X1 + W) 
 	Y_end :=  (Y1 + H)
 	
-	coordMode ,Pixel, Screen
-	ImageSearch, FoundX, FoundY, %X1%, %Y1%, %X_end%, %Y_end%, *85 img\randomstage1.png 
-	If ErrorLevel = 0
-	{
-		Send {Click %FoundX%, %FoundY%}
-		Sleep, %SleepAmount%
-		
-	}
+	
+	FindClick("img/randomstage1.png", Options)
+	
+	
+	
 	
 }	
 
 
 randomstage2()
 {
-	Random, SleepAmount, 1450, 3725
+	
 	
 	WinGetPos, X, Y, Width, Height, %targetwindow% 
 	X1 := X
@@ -261,20 +218,16 @@ randomstage2()
 	X_end := (X1 + W) 
 	Y_end :=  (Y1 + H)
 	
-	coordMode ,Pixel, Screen
-	ImageSearch, FoundX, FoundY, %X1%, %Y1%, %X_end%, %Y_end%, *85 img\randomstage2.png 
-	If ErrorLevel = 0
-	{
-		Send {Click %FoundX%, %FoundY%}
-		Sleep, %SleepAmount%
-		
-	}
+	
+	FindClick("img/randomstage2.png", Options)
+	
+	
 	
 }	
 
 diffverhard()
 {
-	Random, SleepAmount, 1450, 3725
+	
 	
 	WinGetPos, X, Y, Width, Height, %targetwindow% 	
 	X1 := X
@@ -284,21 +237,17 @@ diffverhard()
 	X_end := (X1 + W) 
 	Y_end :=  (Y1 + H)
 	
-	coordMode ,Pixel, Screen
-	ImageSearch, FoundX, FoundY, %X1%, %Y1%, %X_end%, %Y_end%, *85 img\7.png 
-	If ErrorLevel = 0
-	{
-		Send {Click %FoundX%, %FoundY%}
-		Sleep, %SleepAmount%
-		
-	}
+	
+	FindClick("img/7.png", Options)
+	
+	
 	
 }	
 
 
 diffhard()
 {
-	Random, SleepAmount, 1450, 3725
+	
 	
 	WinGetPos, X, Y, Width, Height, %targetwindow% 
 	X1 := X
@@ -308,21 +257,17 @@ diffhard()
 	X_end := (X1 + W) 
 	Y_end :=  (Y1 + H)
 	
-	coordMode ,Pixel, Screen
-	ImageSearch, FoundX, FoundY, %X1%, %Y1%, %X_end%, %Y_end%, *85 img\8.png 
-	If ErrorLevel = 0
-	{
-		Send {Click %FoundX%, %FoundY%}
-		Sleep, %SleepAmount%
-		
-	}
+	
+	FindClick("img/8.png", Options)
+	
+	
 	
 }	
 
 
 diffnormal()
 {
-	Random, SleepAmount, 1450, 3725
+	
 	
 	WinGetPos, X, Y, Width, Height, %targetwindow% 
 	X1 := X
@@ -332,20 +277,16 @@ diffnormal()
 	X_end := (X1 + W) 
 	Y_end :=  (Y1 + H)
 	
-	coordMode ,Pixel, Screen
-	ImageSearch, FoundX, FoundY, %X1%, %Y1%, %X_end%, %Y_end%, *85 img\9.png 
-	If ErrorLevel = 0
-	{
-		Send {Click %FoundX%, %FoundY%}
-		Sleep, %SleepAmount%
-		
-	}
+	
+	FindClick("img/9.png", Options)
+	
+	
 	
 }	
 
 randomlvl1()
 {
-	Random, SleepAmount, 1450, 3725
+	
 	
 	WinGetPos, X, Y, Width, Height, %targetwindow% 
 	X1 := X
@@ -355,21 +296,17 @@ randomlvl1()
 	X_end := (X1 + W) 
 	Y_end :=  (Y1 + H)
 	
-	coordMode ,Pixel, Screen
-	ImageSearch, FoundX, FoundY, %X1%, %Y1%, %X_end%, %Y_end%, *85 img\randomlvl1.png 
-	If ErrorLevel = 0
-	{
-		Send {Click %FoundX%, %FoundY%}
-		Sleep, %SleepAmount%
-		
-	}
+	
+	FindClick("img/randomlvl1.png", Options)
+	
+	
 	
 }	
 
 
 go()
 {
-	Random, SleepAmount, 1450, 3725
+	
 	
 	WinGetPos, X, Y, Width, Height, %targetwindow% 
 	X1 := X
@@ -379,14 +316,11 @@ go()
 	X_end := (X1 + W) 
 	Y_end :=  (Y1 + H)
 	
-	coordMode ,Pixel, Screen
-	ImageSearch, FoundX, FoundY, %X1%, %Y1%, %X_end%, %Y_end%, *85 img\10.png 
-	If ErrorLevel = 0
-	{
-		Send {Click %FoundX%, %FoundY%}
-		Sleep, %SleepAmount%
-		
-	}
+	
+	
+	FindClick("img/10.png", Options)
+	
+	
 	
 }
 
@@ -394,7 +328,7 @@ go()
 
 star()
 {
-	Random, SleepAmount, 1450, 3725
+	
 	
 	WinGetPos, X, Y, Width, Height, %targetwindow% 
 	X1 := X
@@ -404,14 +338,10 @@ star()
 	X_end := (X1 + W) 
 	Y_end :=  (Y1 + H)
 	
-	coordMode ,Pixel, Screen
-	ImageSearch, FoundX, FoundY, %X1%, %Y1%, %X_end%, %Y_end%, *75 img\11.png 
-	If ErrorLevel = 0
-	{
-		Send {Click %FoundX%, %FoundY%}
-		Sleep, %SleepAmount%
-		
-	}
+	
+	FindClick("img/11.png", Options)
+	
+	
 	
 }
 
@@ -419,7 +349,6 @@ star()
 
 randomstart1()
 {
-	Random, SleepAmount, 1450, 3725
 	
 	WinGetPos, X, Y, Width, Height, %targetwindow% 
 	X1 := X
@@ -429,21 +358,17 @@ randomstart1()
 	X_end := (X1 + W) 
 	Y_end :=  (Y1 + H)
 	
-	coordMode ,Pixel, Screen
-	ImageSearch, FoundX, FoundY, %X1%, %Y1%, %X_end%, %Y_end%, *75 img\randomstart1.png 
-	If ErrorLevel = 0
-	{
-		Send {Click %FoundX%, %FoundY%}
-		Sleep, %SleepAmount%
-		
-	}
+	
+	FindClick("img/randomstart1.png", Options)
+	
+	
 	
 }
 
 
 ok()
 {
-	Random, SleepAmount, 1450, 3725
+	Random, SleepAmount, 1450, 2250
 	
 	WinGetPos, X, Y, Width, Height, %targetwindow% 
 	X1 := X
@@ -453,20 +378,17 @@ ok()
 	X_end := (X1 + W) 
 	Y_end :=  (Y1 + H)
 	
-	coordMode ,Pixel, Screen
-	ImageSearch, FoundX, FoundY, %X1%, %Y1%, %X_end%, %Y_end%, *75 img\12.png 
-	If ErrorLevel = 0
-	{
-		Send {Click %FoundX%, %FoundY%}
-		Sleep, %SleepAmount%
-		
-	}
+	
+	
+	FindClick("img/12.png", Options)
+	
+	
+	
 	
 }
 
 randomok1()
 {
-	Random, SleepAmount, 1450, 3725
 	
 	WinGetPos, X, Y, Width, Height, %targetwindow% 
 	X1 := X
@@ -476,21 +398,14 @@ randomok1()
 	X_end := (X1 + W) 
 	Y_end :=  (Y1 + H)
 	
-	coordMode ,Pixel, Screen
-	ImageSearch, FoundX, FoundY, %X1%, %Y1%, %X_end%, %Y_end%, *75 img\randomok1.png 
-	If ErrorLevel = 0
-	{
-		Send {Click %FoundX%, %FoundY%}
-		Sleep, %SleepAmount%
-		
-	}
+	FindClick("img/randomok1.png", Options)
+	
 	
 }
 
 
 levelup()
 {
-	Random, SleepAmount, 1450, 3725
 	
 	WinGetPos, X, Y, Width, Height, %targetwindow% 
 	X1 := X
@@ -500,14 +415,9 @@ levelup()
 	X_end := (X1 + W) 
 	Y_end :=  (Y1 + H)
 	
-	coordMode ,Pixel, Screen
-	ImageSearch, FoundX, FoundY, %X1%, %Y1%, %X_end%, %Y_end%, *75 img\up.png 
-	If ErrorLevel = 0
-	{
-		Send {Click %FoundX%, %FoundY%}
-		Sleep, %SleepAmount%
-		
-	}
+	FindClick("img/up.png", Options)
+	
+	
 	
 }
 
@@ -516,7 +426,6 @@ levelup()
 
 Randomad1()
 {
-	Random, SleepAmount, 1450, 3725
 	
 	WinGetPos, X, Y, Width, Height, %targetwindow% 
 	X1 := X
@@ -526,14 +435,7 @@ Randomad1()
 	X_end := (X1 + W) 
 	Y_end :=  (Y1 + H)
 	
-	coordMode ,Pixel, Screen
-	ImageSearch, FoundX, FoundY, %X1%, %Y1%, %X_end%, %Y_end%, *75 img\randomad1.png 
-	If ErrorLevel = 0
-	{
-		Send {Click %FoundX%, %FoundY%}
-		Sleep, %SleepAmount%
-		
-	}
+	FindClick("img/randomad1.png", Options)
 	
 }
 
@@ -541,7 +443,6 @@ Randomad1()
 
 Randomad2()
 {
-	Random, SleepAmount, 1450, 3725
 	
 	WinGetPos, X, Y, Width, Height, %targetwindow% 
 	X1 := X
@@ -551,13 +452,36 @@ Randomad2()
 	X_end := (X1 + W) 
 	Y_end :=  (Y1 + H)
 	
-	coordMode ,Pixel, Screen
-	ImageSearch, FoundX, FoundY, %X1%, %Y1%, %X_end%, %Y_end%, *75 img\randomad2.png 
-	If ErrorLevel = 0
+	FindClick("img/randomad2.png", Options)
+	
+	
+}
+
+
+Randomlist()
+{
+	
+	Random, SleepAmount, 1450, 2250
+	Sleep, %SleepAmount%
+	
+	WinGetPos, X, Y, Width, Height, %targetwindow% 
+	X1 := X
+	Y1 := Y
+	W := Width
+	H := Height
+	X_end := (X1 + W) 
+	Y_end :=  (Y1 + H)
+	
+	;Options := "o65 Silent r"
+	ImageList := ["img/rndm/rnd1.png", "img/rndm/rnd2.png", "img/rndm/rnd3.png","img/rndm/rnd4.png", "img/rndm/rnd5.png", "img/rndm/rnd6.png","img/rndm/rnd7.png", "img/rndm/rnd8.png", "img/rndm/rnd9.png"]
+	
+	For key, ImageFile in ImageList
 	{
-		Send {Click %FoundX%, %FoundY%}
-		Sleep, %SleepAmount%
-		
+		If FindClick(ImageFile, Options2) ; fill in the options
+		{
+			Break
+		}
+	; Do other stuff each loop, like maybe add a sleep
 	}
 	
 }

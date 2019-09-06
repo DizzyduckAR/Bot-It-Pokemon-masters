@@ -22,7 +22,8 @@ SetMouseDelay -1
 #SingleInstance off
 #NoTrayIcon
 
-Random, SleepAmount, 1450, 3725
+Random, SleepAmount, 1450, 2250
+
 
 
 
@@ -50,6 +51,7 @@ Gui, Submit, NoHide
 
 
 
+
 If (menuChoice = "Levelup")
 	
 {
@@ -58,6 +60,8 @@ If (menuChoice = "Levelup")
 	
 	Loop
 	{
+		
+		
 		GuiControl, 1:, MyProgress,%MyProgress%
 		
 		start()
@@ -134,6 +138,10 @@ If (menuChoice = "Levelup")
 		
 		GuiControl, 1:, MyProgress,%MyProgress%
 		
+		Randomlist()
+		
+		Random, SleepAmount, 1450, 2250
+		Sleep, %SleepAmount%
 		Sleep, %SleepAmount%
 		
 	}
@@ -145,6 +153,7 @@ If (menuChoice = "Strike")
 	
 	Loop
 	{
+		Random, SleepAmount, 1450, 2250
 		
 		GuiControl, 1:, MyProgress,%MyProgress%
 		
@@ -222,13 +231,15 @@ If (menuChoice = "Strike")
 		;Randoms
 		
 		Randomad2()
-		
+		Randomlist()
 		;Randoms end
 		
 		
 		
 		GuiControl, 1:, MyProgress,%MyProgress%
 		Sleep, %SleepAmount%
+		Sleep, %SleepAmount%
+		
 		
 		
 	}
@@ -242,6 +253,8 @@ If (menuChoice = "Tech")
 	MsgBox, Start Tech Course %Gamechoice%	
 	Loop
 	{
+		
+		
 		GuiControl, 1:, MyProgress,%MyProgress%
 		
 		start()
@@ -318,14 +331,18 @@ If (menuChoice = "Tech")
 		;Randoms
 		
 		Randomad2()
+		Randomlist()
 		
 		;Randoms end
 		
 		
 		
 		GuiControl, 1:, MyProgress,%MyProgress%
-		Sleep, %SleepAmount%
 		
+		
+		Random, SleepAmount, 1450, 2250
+		Sleep, %SleepAmount%
+		Sleep, %SleepAmount%
 		
 	}
 	
@@ -411,12 +428,17 @@ If (menuChoice = "Support")
 		
 		;Randoms
 		
-		Randomad2()		
+		Randomad2()	
+		Randomlist()
 		;Randoms end
 		
 		
 		
 		GuiControl, 1:, MyProgress,%MyProgress%
+		
+		
+		Random, SleepAmount, 1450, 2250
+		Sleep, %SleepAmount%
 		Sleep, %SleepAmount%
 		
 		
@@ -518,7 +540,12 @@ If (menuChoice = "Story COOP")
 		GuiControl, 1:, MyProgress,%MyProgress%
 		
 		Randomad2()
+		Randomlist()
 		
+		
+		
+		Random, SleepAmount, 1450, 2250
+		Sleep, %SleepAmount%
 		Sleep, %SleepAmount%
 		
 	}
@@ -602,6 +629,6 @@ GuiClose:
 ExitApp
 
 F8::ExitApp
-
+F3::FindClick("dx")
 
 
