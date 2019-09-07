@@ -80,7 +80,7 @@ eventselectrandom1()
 	Y_end :=  (Y1 + H)
 	
 	CoordMode, Pixel, Screen	
-	ImageSearch, FoundX, FoundY, %X1%, %Y1%, %X_end%, %Y_end%, *75 img\3.png 
+	ImageSearch, FoundX, FoundY, %X1%, %Y1%, %X_end%, %Y_end%, *75 img\random1.png 
 	If ErrorLevel = 0
 	{
 		TrueX := (FoundX) - (X - Y)
