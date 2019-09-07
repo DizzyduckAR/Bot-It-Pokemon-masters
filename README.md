@@ -1,10 +1,16 @@
-# Pokemon Masters Bot-It v0.43
+# Pokemon Masters Bot-It v0.45
 
 Fully portable come with installer to easy screen the images while bot is running.
 no data saved / no data sent
 If *.exe give you false anti viruse you can download the *.exe from autohotkey and rename it to the script name it only run the code..
 
 Log:
+Pokemon masters V0.45
+
+*Bot it Use Postmassage to command the target mirror (no more mouse use)
+
+
+
 
 Pokemon masters V0.43
 
