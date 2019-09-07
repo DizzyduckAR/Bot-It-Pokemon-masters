@@ -4,29 +4,13 @@
 ; https://github.com/DizzyduckAR/AutoMirror/
 
 global targetwindow := "No window Picked" ;Window name
-global Options := "o65 Silent r" ; image miss % options 1-254 "o65"
-global Options2 := "o35 Silent r" ; image list miss % options 1-254 "o35"
-#Include Core\FindClick.ahk
+global Random, SleepAmount, 2150, 3000
 
 
 
 
 
 
-
-
-
-wpos(X1, Y1, X_end, Y_end)
-{
-	WinGetPos, X, Y, Width, Height, %targetwindow% 	
-	X1 := X
-	Y1 := Y
-	W := Width
-	H := Height
-	X_end := (X1 + W) 
-	Y_end :=  (Y1 + H)
-	;MsgBox, %X1% %Y1% %X_end% %Y_end% %targetwindow% 
-}
 
 
 start()
@@ -40,9 +24,16 @@ start()
 	X_end := (X1 + W) 
 	Y_end :=  (Y1 + H)
 	
-	
-	FindClick("img/1.png", Options)
-	
+	CoordMode, Pixel, Screen	
+	ImageSearch, FoundX, FoundY, %X1%, %Y1%, %X_end%, %Y_end%, *75 img\1.png 
+	If ErrorLevel = 0
+	{
+		TrueX := (FoundX) - (X - Y)
+		TrueY := (FoundY)-(Y) 
+		ControlClick2(TrueX, TrueY , targetwindow)
+		Sleep, %SleepAmount%		
+		return
+	}	
 	
 }
 
@@ -59,8 +50,16 @@ eventselect()
 	X_end := (X1 + W) 
 	Y_end :=  (Y1 + H)
 	
-	FindClick("img/2.png", Options)
-	
+	CoordMode, Pixel, Screen	
+	ImageSearch, FoundX, FoundY, %X1%, %Y1%, %X_end%, %Y_end%, *75 img\2.png 
+	If ErrorLevel = 0
+	{
+		TrueX := (FoundX) - (X - Y)
+		TrueY := (FoundY)-(Y) 
+		ControlClick2(TrueX, TrueY , targetwindow)
+		Sleep, %SleepAmount%		
+		return
+	}	
 	
 }	
 
@@ -80,10 +79,16 @@ eventselectrandom1()
 	X_end := (X1 + W) 
 	Y_end :=  (Y1 + H)
 	
-	
-	FindClick("img/1random1.png", Options)
-	
-	
+	CoordMode, Pixel, Screen	
+	ImageSearch, FoundX, FoundY, %X1%, %Y1%, %X_end%, %Y_end%, *75 img\3.png 
+	If ErrorLevel = 0
+	{
+		TrueX := (FoundX) - (X - Y)
+		TrueY := (FoundY)-(Y) 
+		ControlClick2(TrueX, TrueY , targetwindow)
+		Sleep, %SleepAmount%		
+		return
+	}		
 	
 	
 }	
@@ -101,7 +106,18 @@ eventselectrandom2()
 	X_end := (X1 + W) 
 	Y_end :=  (Y1 + H)
 	
-	FindClick("img/2random1.png", Options)
+	CoordMode, Pixel, Screen	
+	ImageSearch, FoundX, FoundY, %X1%, %Y1%, %X_end%, %Y_end%, *75 img\2random1.png 
+	If ErrorLevel = 0
+	{
+		TrueX := (FoundX) - (X - Y)
+		TrueY := (FoundY)-(Y) 
+		ControlClick2(TrueX, TrueY , targetwindow)
+		Sleep, %SleepAmount%
+		
+		return
+	}	
+	
 	
 	
 	
@@ -123,8 +139,16 @@ train1()
 	X_end := (X1 + W) 
 	Y_end :=  (Y1 + H)
 	
-	FindClick("img/3.png", Options)
-	
+	CoordMode, Pixel, Screen	
+	ImageSearch, FoundX, FoundY, %X1%, %Y1%, %X_end%, %Y_end%, *75 img\3.png 
+	If ErrorLevel = 0
+	{
+		TrueX := (FoundX) - (X - Y)
+		TrueY := (FoundY)-(Y) 
+		ControlClick2(TrueX, TrueY , targetwindow)
+		Sleep, %SleepAmount%
+		return
+	}		
 	
 	
 }	
@@ -141,9 +165,16 @@ train4()
 	X_end := (X1 + W) 
 	Y_end :=  (Y1 + H)
 	
-	FindClick("img/6.png", Options)
-	
-	
+	CoordMode, Pixel, Screen	
+	ImageSearch, FoundX, FoundY, %X1%, %Y1%, %X_end%, %Y_end%, *75 img\6.png 
+	If ErrorLevel = 0
+	{
+		TrueX := (FoundX) - (X - Y)
+		TrueY := (FoundY)-(Y) 
+		ControlClick2(TrueX, TrueY , targetwindow)
+		Sleep, %SleepAmount%
+		return
+	}	
 	
 }	
 
@@ -159,9 +190,16 @@ train2()
 	X_end := (X1 + W) 
 	Y_end :=  (Y1 + H)
 	
-	
-	FindClick("img/4.png", Options)
-	
+	CoordMode, Pixel, Screen	
+	ImageSearch, FoundX, FoundY, %X1%, %Y1%, %X_end%, %Y_end%, *75 img\4.png 
+	If ErrorLevel = 0
+	{
+		TrueX := (FoundX) - (X - Y)
+		TrueY := (FoundY)-(Y) 
+		ControlClick2(TrueX, TrueY , targetwindow)
+		Sleep, %SleepAmount%
+		return
+	}	
 	
 	
 }	
@@ -178,8 +216,16 @@ train3()
 	X_end := (X1 + W) 
 	Y_end :=  (Y1 + H)
 	
-	
-	FindClick("img/5.png", Options)
+	CoordMode, Pixel, Screen	
+	ImageSearch, FoundX, FoundY, %X1%, %Y1%, %X_end%, %Y_end%, *75 img\5.png 
+	If ErrorLevel = 0
+	{
+		TrueX := (FoundX) - (X - Y)
+		TrueY := (FoundY)-(Y) 
+		ControlClick2(TrueX, TrueY , targetwindow)
+		Sleep, %SleepAmount%
+		return
+	}	
 	
 	
 }	
@@ -197,10 +243,16 @@ randomstage1()
 	X_end := (X1 + W) 
 	Y_end :=  (Y1 + H)
 	
-	
-	FindClick("img/randomstage1.png", Options)
-	
-	
+	CoordMode, Pixel, Screen	
+	ImageSearch, FoundX, FoundY, %X1%, %Y1%, %X_end%, %Y_end%, *75 img\randomstage1.png
+	If ErrorLevel = 0
+	{
+		TrueX := (FoundX) - (X - Y)
+		TrueY := (FoundY)-(Y) 
+		ControlClick2(TrueX, TrueY , targetwindow)
+		Sleep, %SleepAmount%
+		return
+	}	
 	
 	
 }	
@@ -218,10 +270,18 @@ randomstage2()
 	X_end := (X1 + W) 
 	Y_end :=  (Y1 + H)
 	
-	
-	FindClick("img/randomstage2.png", Options)
-	
-	
+	CoordMode, Pixel, Screen	
+	ImageSearch, FoundX, FoundY, %X1%, %Y1%, %X_end%, %Y_end%, *75 img\randomstage2.png
+	If ErrorLevel = 0
+	{
+		TrueX := (FoundX) - (X - Y)
+		TrueY := (FoundY)-(Y) 
+		;MsgBox, %X% %Y% %X_end% %Y_end% %FoundX% %FoundY%
+		;MsgBox, %TrueX% %TrueY%
+		ControlClick2(TrueX, TrueY , targetwindow)
+		Sleep, %SleepAmount%
+		return
+	}	
 	
 }	
 
@@ -237,9 +297,19 @@ diffverhard()
 	X_end := (X1 + W) 
 	Y_end :=  (Y1 + H)
 	
-	
-	FindClick("img/7.png", Options)
-	
+	CoordMode, Pixel, Screen	
+	ImageSearch, FoundX, FoundY, %X1%, %Y1%, %X_end%, %Y_end%, *75 img\7.png
+	If ErrorLevel = 0
+	{
+		TrueX := (FoundX) - (X - Y)
+		TrueY := (FoundY)-(Y) 
+		
+		;MsgBox, %X% %Y% %X_end% %Y_end% %FoundX% %FoundY%
+		;MsgBox, %TrueX% %TrueY%
+		ControlClick2(TrueX, TrueY , targetwindow)
+		Sleep, %SleepAmount%
+		return
+	}		
 	
 	
 }	
@@ -257,8 +327,17 @@ diffhard()
 	X_end := (X1 + W) 
 	Y_end :=  (Y1 + H)
 	
-	
-	FindClick("img/8.png", Options)
+	CoordMode, Pixel, Screen	
+	ImageSearch, FoundX, FoundY, %X1%, %Y1%, %X_end%, %Y_end%, *75 img\8.png
+	If ErrorLevel = 0
+	{
+		TrueX := (FoundX) - (X - Y)
+		TrueY := (FoundY)-(Y) 
+		
+		ControlClick2(TrueX, TrueY , targetwindow)
+		Sleep, %SleepAmount%
+		return
+	}	
 	
 	
 	
@@ -277,9 +356,17 @@ diffnormal()
 	X_end := (X1 + W) 
 	Y_end :=  (Y1 + H)
 	
-	
-	FindClick("img/9.png", Options)
-	
+	CoordMode, Pixel, Screen	
+	ImageSearch, FoundX, FoundY, %X1%, %Y1%, %X_end%, %Y_end%, *75 img\9.png
+	If ErrorLevel = 0
+	{
+		TrueX := (FoundX) - (X - Y)
+		TrueY := (FoundY)-(Y) 
+		
+		ControlClick2(TrueX, TrueY , targetwindow)
+		Sleep, %SleepAmount%
+		return
+	}		
 	
 	
 }	
@@ -296,9 +383,17 @@ randomlvl1()
 	X_end := (X1 + W) 
 	Y_end :=  (Y1 + H)
 	
-	
-	FindClick("img/randomlvl1.png", Options)
-	
+	CoordMode, Pixel, Screen	
+	ImageSearch, FoundX, FoundY, %X1%, %Y1%, %X_end%, %Y_end%, *75 img\randomlvl1.png
+	If ErrorLevel = 0
+	{
+		TrueX := (FoundX) - (X - Y)
+		TrueY := (FoundY)-(Y) 
+		
+		ControlClick2(TrueX, TrueY , targetwindow)
+		Sleep, %SleepAmount%
+		return
+	}		
 	
 	
 }	
@@ -317,8 +412,17 @@ go()
 	Y_end :=  (Y1 + H)
 	
 	
-	
-	FindClick("img/10.png", Options)
+	CoordMode, Pixel, Screen	
+	ImageSearch, FoundX, FoundY, %X1%, %Y1%, %X_end%, %Y_end%, *75 img\10.png
+	If ErrorLevel = 0
+	{
+		TrueX := (FoundX) - (X - Y)
+		TrueY := (FoundY)-(Y) 
+		
+		ControlClick2(TrueX, TrueY , targetwindow)
+		Sleep, %SleepAmount%
+		return
+	}	
 	
 	
 	
@@ -338,9 +442,17 @@ star()
 	X_end := (X1 + W) 
 	Y_end :=  (Y1 + H)
 	
-	
-	FindClick("img/11.png", Options)
-	
+	CoordMode, Pixel, Screen	
+	ImageSearch, FoundX, FoundY, %X1%, %Y1%, %X_end%, %Y_end%, *75 img\11.png
+	If ErrorLevel = 0
+	{
+		TrueX := (FoundX) - (X - Y)
+		TrueY := (FoundY)-(Y) 
+		
+		ControlClick2(TrueX, TrueY , targetwindow)
+		Sleep, %SleepAmount%
+		return
+	}		
 	
 	
 }
@@ -358,9 +470,17 @@ randomstart1()
 	X_end := (X1 + W) 
 	Y_end :=  (Y1 + H)
 	
-	
-	FindClick("img/randomstart1.png", Options)
-	
+	CoordMode, Pixel, Screen	
+	ImageSearch, FoundX, FoundY, %X1%, %Y1%, %X_end%, %Y_end%, *75 img\randomstart1.png
+	If ErrorLevel = 0
+	{
+		TrueX := (FoundX) - (X - Y)
+		TrueY := (FoundY)-(Y) 
+		
+		ControlClick2(TrueX, TrueY , targetwindow)
+		Sleep, %SleepAmount%
+		return
+	}	
 	
 	
 }
@@ -378,12 +498,17 @@ ok()
 	X_end := (X1 + W) 
 	Y_end :=  (Y1 + H)
 	
-	
-	
-	FindClick("img/12.png", Options)
-	
-	
-	
+	CoordMode, Pixel, Screen	
+	ImageSearch, FoundX, FoundY, %X1%, %Y1%, %X_end%, %Y_end%, *75 img\12.png
+	If ErrorLevel = 0
+	{
+		TrueX := (FoundX) - (X - Y)
+		TrueY := (FoundY)-(Y) 
+		
+		ControlClick2(TrueX, TrueY , targetwindow)
+		Sleep, %SleepAmount%
+		return
+	}		
 	
 }
 
@@ -398,8 +523,17 @@ randomok1()
 	X_end := (X1 + W) 
 	Y_end :=  (Y1 + H)
 	
-	FindClick("img/randomok1.png", Options)
-	
+	CoordMode, Pixel, Screen	
+	ImageSearch, FoundX, FoundY, %X1%, %Y1%, %X_end%, %Y_end%, *75 img\randomok1.png
+	If ErrorLevel = 0
+	{
+		TrueX := (FoundX) - (X - Y)
+		TrueY := (FoundY)-(Y) 
+		
+		ControlClick2(TrueX, TrueY , targetwindow)
+		Sleep, %SleepAmount%
+		return
+	}	
 	
 }
 
@@ -415,52 +549,27 @@ levelup()
 	X_end := (X1 + W) 
 	Y_end :=  (Y1 + H)
 	
-	FindClick("img/up.png", Options)
-	
-	
-	
-}
-
-
-
-
-Randomad1()
-{
-	
-	WinGetPos, X, Y, Width, Height, %targetwindow% 
-	X1 := X
-	Y1 := Y
-	W := Width
-	H := Height
-	X_end := (X1 + W) 
-	Y_end :=  (Y1 + H)
-	
-	FindClick("img/randomad1.png", Options)
-	
-}
-
-
-
-Randomad2()
-{
-	
-	WinGetPos, X, Y, Width, Height, %targetwindow% 
-	X1 := X
-	Y1 := Y
-	W := Width
-	H := Height
-	X_end := (X1 + W) 
-	Y_end :=  (Y1 + H)
-	
-	FindClick("img/randomad2.png", Options)
+	CoordMode, Pixel, Screen
+	ImageSearch, FoundX, FoundY, %X1%, %Y1%, %X_end%, %Y_end%, *75 img\up.png
+	If ErrorLevel = 0
+	{
+		TrueX := (FoundX) - (X - Y)
+		TrueY := (FoundY)-(Y) 
+		
+		ControlClick2(TrueX, TrueY , targetwindow)
+		Sleep, %SleepAmount%
+		return
+	}		
 	
 	
 }
+
+
 
 
 Randomlist()
+
 {
-	
 	Random, SleepAmount, 1450, 2250
 	Sleep, %SleepAmount%
 	
@@ -473,37 +582,142 @@ Randomlist()
 	Y_end :=  (Y1 + H)
 	
 	
-	ImageList := ["img/rndm/rnd1.png", "img/rndm/rnd2.png", "img/rndm/rnd3.png","img/rndm/rnd4.png", "img/rndm/rnd5.png", "img/rndm/rnd6.png","img/rndm/rnd7.png", "img/rndm/rnd8.png", "img/rndm/rnd9.png"]
 	
-	For key, ImageFile in ImageList
+	CoordMode, Pixel, Screen
+	ImageSearch, FoundX, FoundY, %X1%, %Y1%, %X_end%, %Y_end%, *75 img\rndm\rnd1.png
+	If ErrorLevel = 0
 	{
-		If FindClick(ImageFile, Options2) ; fill in the options
+		TrueX := (FoundX) - (X - Y)
+		TrueY := (FoundY)-(Y) 
+		
+		ControlClick2(TrueX, TrueY , targetwindow)
+		Sleep, %SleepAmount%
+		return
+	}		
+	ImageSearch, FoundX, FoundY, %X1%, %Y1%, %X_end%, %Y_end%, *75 img\rndm\rnd2.png
+	If ErrorLevel = 0
+	{
+		TrueX := (FoundX) - (X - Y)
+		TrueY := (FoundY)-(Y) 
+		
+		ControlClick2(TrueX, TrueY , targetwindow)
+		Sleep, %SleepAmount%
+		return
+	}	
+	ImageSearch, FoundX, FoundY, %X1%, %Y1%, %X_end%, %Y_end%, *75 img\rndm\rnd3.png
+	If ErrorLevel = 0
+	{
+		TrueX := (FoundX) - (X - Y)
+		TrueY := (FoundY)-(Y) 
+		
+		ControlClick2(TrueX, TrueY , targetwindow)
+		Sleep, %SleepAmount%
+		return
+	}	
+	ImageSearch, FoundX, FoundY, %X1%, %Y1%, %X_end%, %Y_end%, *75 img\rndm\rnd4.png
+	If ErrorLevel = 0
+	{
+		TrueX := (FoundX) - (X - Y)
+		TrueY := (FoundY)-(Y) 
+		
+		ControlClick2(TrueX, TrueY , targetwindow)
+		Sleep, %SleepAmount%
+		return
+	}	
+	ImageSearch, FoundX, FoundY, %X1%, %Y1%, %X_end%, %Y_end%, *75 img\rndm\rnd5.png
+	If ErrorLevel = 0
+	{
+		TrueX := (FoundX) - (X - Y)
+		TrueY := (FoundY)-(Y) 
+		
+		ControlClick2(TrueX, TrueY , targetwindow)
+		Sleep, %SleepAmount%
+		return
+	}	
+	ImageSearch, FoundX, FoundY, %X1%, %Y1%, %X_end%, %Y_end%, *75 img\rndm\rnd6.png
+	If ErrorLevel = 0
+	{
+		TrueX := (FoundX) - (X - Y)
+		TrueY := (FoundY)-(Y) 
+		
+		ControlClick2(TrueX, TrueY , targetwindow)
+		Sleep, %SleepAmount%
+		return
+	}	
+	ImageSearch, FoundX, FoundY, %X1%, %Y1%, %X_end%, %Y_end%, *75 img\rndm\rnd7.png
+	If ErrorLevel = 0
+	{
+		TrueX := (FoundX) - (X - Y)
+		TrueY := (FoundY)-(Y) 
+		
+		ControlClick2(TrueX, TrueY , targetwindow)
+		Sleep, %SleepAmount%
+		return
+	}	
+	ImageSearch, FoundX, FoundY, %X1%, %Y1%, %X_end%, %Y_end%, *75 img\rndm\rnd8.png
+	If ErrorLevel = 0
+	{
+		TrueX := (FoundX) - (X - Y)
+		TrueY := (FoundY)-(Y) 
+		
+		ControlClick2(TrueX, TrueY , targetwindow)
+		Sleep, %SleepAmount%
+		return
+	}	
+	ImageSearch, FoundX, FoundY, %X1%, %Y1%, %X_end%, %Y_end%, *75 img\rndm\rnd9.png
+	If ErrorLevel = 0
+	{
+		TrueX := (FoundX) - (X - Y)
+		TrueY := (FoundY)-(Y) 
+		
+		ControlClick2(TrueX, TrueY , targetwindow)
+		Sleep, %SleepAmount%
+		return
+	}	
+}	
+	
+	
+	Failsafe1()
+	{
+		
+		WinGetPos, X, Y, Width, Height, %targetwindow% 
+		X1 := X
+		Y1 := Y
+		W := Width
+		H := Height
+		X_end := (X1 + W) 
+		Y_end :=  (Y1 + H)
+		
+		
+		
+		CoordMode, Pixel, Screen
+		ImageSearch, FoundX, FoundY, %X1%, %Y1%, %X_end%, %Y_end%, *75 img\failsafe1.png ; fill in the options
+		If ErrorLevel = 0
+			
 		{
-			Break
+			
+			TrueX := (FoundX) - (X - Y)
+			TrueY := (FoundY)-(Y) 
+			
+			ControlClick2(TrueX, TrueY , targetwindow)
+			sleep, 35000			
+			Sleep, %SleepAmount%
+			CoordMode, Pixel, Screen
+			ImageSearch, FoundX, FoundY, %X1%, %Y1%, %X_end%, %Y_end%, *75 img\failsafe2.png
+			If ErrorLevel = 0			
+			{
+				TrueX := (FoundX) - (X - Y)
+				TrueY := (FoundY)-(Y) 
+				
+				ControlClick2(TrueX, TrueY , targetwindow)
+				sleep, 35000			
+				Sleep, %SleepAmount%
+				return
+			}			
+			
 		}
-	; Do other stuff each loop, like maybe add a sleep
 	}
 	
-}
-
-
-Failsafe1()
-{
 	
-	WinGetPos, X, Y, Width, Height, %targetwindow% 
-	X1 := X
-	Y1 := Y
-	W := Width
-	H := Height
-	X_end := (X1 + W) 
-	Y_end :=  (Y1 + H)
 	
-	If FindClick("img/failsafe1.png", Options) ; fill in the options
-	{
-		FindClick("img/failsafe1.png", Options)
-		sleep, 35000
-		FindClick("img/failsafe2.png", Options)
-		
-		
-	}
-}
+	#Include Core\controlclick.ahk

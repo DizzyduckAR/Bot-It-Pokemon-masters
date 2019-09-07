@@ -14,15 +14,16 @@ SetTitleMatchMode 2
 SetTitleMatchMode Fast
 #WinActivateForce
 SetControlDelay 1
-SetWinDelay 0
+SetWinDelay 1
 SetKeyDelay -1
 SetMouseDelay -1
+;DetectHiddenWindows,On
 #SingleInstance force
 #SingleInstance ignore
 #SingleInstance off
 #NoTrayIcon
 
-Random, SleepAmount, 1450, 2250
+global Random, SleepAmount, 500, 1250
 
 
 
@@ -61,37 +62,36 @@ If (menuChoice = "Levelup")
 	Loop
 	{
 		
-		
-		GuiControl, 1:, MyProgress,%MyProgress%
-		
 		start()
-		
-		GuiControl, 1:, MyProgress,%MyProgress%		
+		GuiControl, 1:, MyProgress,%MyProgress%	
 		
 		eventselect()
-		
-		GuiControl, 1:, MyProgress,%MyProgress%		
-		
-		train1()
-		
 		GuiControl, 1:, MyProgress,%MyProgress%
 		
+		train1()
+		GuiControl, 1:, MyProgress,%MyProgress%
+		
+		Sleep, %SleepAmount%
 		If (Gamechoice = "Normal")
 			
 		{
-			diffnormal()
+			diffnormal()	
+			GuiControl, 1:, MyProgress,%MyProgress%
 		}
-		
+		Sleep, %SleepAmount%
 		If (Gamechoice = "Hard")
 			
 		{
 			diffhard()
+			GuiControl, 1:, MyProgress,%MyProgress%
 		}
 		
+		Sleep, %SleepAmount%
 		If (Gamechoice = "Very Hard")
 			
 		{
-			diffverhard()
+			diffverhard()	
+			GuiControl, 1:, MyProgress,%MyProgress%
 		}
 		
 		If (Gamechoice = "Random RAGE")
@@ -99,50 +99,45 @@ If (menuChoice = "Levelup")
 		{
 			Random, diffpick, 1, 3
 			;Msgbox, %diffpick%
-			
 			If ( diffpick = 1)
 			{
-				diffnormal()
+				diffnormal()	
+				GuiControl, 1:, MyProgress,%MyProgress%
 			}
 			
+			Sleep, %SleepAmount%
 			If ( diffpick = 2)
 			{
 				diffhard()
+				GuiControl, 1:, MyProgress,%MyProgress%
 			}
 			
+			Sleep, %SleepAmount%
 			If ( diffpick  = 3)
 			{
 				diffverhard()
+				GuiControl, 1:, MyProgress,%MyProgress%
 			}
 		}
 		
-		GuiControl, 1:, MyProgress,%MyProgress%
-		
-		go()
-		
+		go()		
 		GuiControl, 1:, MyProgress,%MyProgress%
 		
 		star()
-		
 		GuiControl, 1:, MyProgress,%MyProgress%
 		
 		ok()
-		
 		GuiControl, 1:, MyProgress,%MyProgress%
+		
 		
 		levelup()
-		
 		GuiControl, 1:, MyProgress,%MyProgress%
 		
-		Randomad2()		
-		
-		GuiControl, 1:, MyProgress,%MyProgress%
-		
-		Randomlist()
+		;andomlist()
 		
 		Failsafe1()
-		
-		Random, SleepAmount, 1450, 2250
+		GuiControl, 1:, MyProgress,%MyProgress%
+		Randomlist()		
 		Sleep, %SleepAmount%
 		Sleep, %SleepAmount%
 		
@@ -176,39 +171,52 @@ If (menuChoice = "Strike")
 			
 		{
 			diffnormal()
+			GuiControl, 1:, MyProgress,%MyProgress%
+			
 		}
-		
+		sleep,300	
 		If (Gamechoice = "Hard")
 			
 		{
 			diffhard()
+			GuiControl, 1:, MyProgress,%MyProgress%
+			
 		}
-		
+		sleep,300	
 		If (Gamechoice = "Very Hard")
 			
 		{
 			diffverhard()
+			GuiControl, 1:, MyProgress,%MyProgress%
+			
 		}
-		
+		sleep,300	
 		If (Gamechoice = "Random RAGE")
 			
 		{
 			Random, diffpick, 1, 3
 			;Msgbox, %diffpick%
-			
+			sleep,300	
 			If ( diffpick = 1)
 			{
 				diffnormal()
+				GuiControl, 1:, MyProgress,%MyProgress%
+				
 			}
-			
+			sleep,300			
 			If ( diffpick = 2)
 			{
 				diffhard()
+				GuiControl, 1:, MyProgress,%MyProgress%
+				
 			}
 			
+			sleep,300
 			If ( diffpick  = 3)
 			{
 				diffverhard()
+				GuiControl, 1:, MyProgress,%MyProgress%
+				
 			}
 		}
 		
@@ -232,9 +240,10 @@ If (menuChoice = "Strike")
 		
 		;Randoms
 		
-		Randomad2()
-		Randomlist()
+	;Randomlist()
 	     Failsafe1()
+		Randomlist()
+		
 		;Randoms end
 		
 		
@@ -277,39 +286,52 @@ If (menuChoice = "Tech")
 			
 		{
 			diffnormal()
+			GuiControl, 1:, MyProgress,%MyProgress%
+			
 		}
-		
+		sleep,300	
 		If (Gamechoice = "Hard")
 			
 		{
 			diffhard()
+			GuiControl, 1:, MyProgress,%MyProgress%
+			
 		}
-		
+		sleep,300	
 		If (Gamechoice = "Very Hard")
 			
 		{
 			diffverhard()
+			GuiControl, 1:, MyProgress,%MyProgress%
+			
 		}
-		
+		sleep,300	
 		If (Gamechoice = "Random RAGE")
 			
 		{
 			Random, diffpick, 1, 3
 			;Msgbox, %diffpick%
-			
+			sleep,300	
 			If ( diffpick = 1)
 			{
 				diffnormal()
+				GuiControl, 1:, MyProgress,%MyProgress%
+				
 			}
-			
+			sleep,300			
 			If ( diffpick = 2)
 			{
 				diffhard()
+				GuiControl, 1:, MyProgress,%MyProgress%
+				
 			}
 			
+			sleep,300
 			If ( diffpick  = 3)
 			{
 				diffverhard()
+				GuiControl, 1:, MyProgress,%MyProgress%
+				
 			}
 		}
 		
@@ -333,9 +355,10 @@ If (menuChoice = "Tech")
 		
 		;Randoms
 		
-		Randomad2()
-		Randomlist()
+	;Randomlist()
 		Failsafe1()
+		Randomlist()
+		
 		;Randoms end
 		
 		
@@ -375,39 +398,52 @@ If (menuChoice = "Support")
 			
 		{
 			diffnormal()
+			GuiControl, 1:, MyProgress,%MyProgress%
+			
 		}
-		
+		sleep,300	
 		If (Gamechoice = "Hard")
 			
 		{
 			diffhard()
+			GuiControl, 1:, MyProgress,%MyProgress%
+			
 		}
-		
+		sleep,300	
 		If (Gamechoice = "Very Hard")
 			
 		{
 			diffverhard()
+			GuiControl, 1:, MyProgress,%MyProgress%
+			
 		}
-		
+		sleep,300	
 		If (Gamechoice = "Random RAGE")
 			
 		{
 			Random, diffpick, 1, 3
 			;Msgbox, %diffpick%
-			
+			sleep,300	
 			If ( diffpick = 1)
 			{
 				diffnormal()
+				GuiControl, 1:, MyProgress,%MyProgress%
+				
 			}
-			
+			sleep,300			
 			If ( diffpick = 2)
 			{
 				diffhard()
+				GuiControl, 1:, MyProgress,%MyProgress%
+				
 			}
 			
+			sleep,300
 			If ( diffpick  = 3)
 			{
 				diffverhard()
+				GuiControl, 1:, MyProgress,%MyProgress%
+				
 			}
 		}
 		
@@ -431,9 +467,10 @@ If (menuChoice = "Support")
 		
 		;Randoms
 		
-		Randomad2()	
-		Randomlist()
+	;Randomlist()
 		Failsafe1()
+		Randomlist()
+		
 		;Randoms end
 		
 		
@@ -479,39 +516,52 @@ If (menuChoice = "Story COOP")
 			
 		{
 			diffnormal()
+			GuiControl, 1:, MyProgress,%MyProgress%
+			
 		}
-		
+		sleep,300	
 		If (Gamechoice = "Hard")
 			
 		{
 			diffhard()
+			GuiControl, 1:, MyProgress,%MyProgress%
+			
 		}
-		
+		sleep,300	
 		If (Gamechoice = "Very Hard")
 			
 		{
 			diffverhard()
+			GuiControl, 1:, MyProgress,%MyProgress%
+			
 		}
-		
+		sleep,300	
 		If (Gamechoice = "Random RAGE")
 			
 		{
 			Random, diffpick, 1, 3
 			;Msgbox, %diffpick%
-			
+			sleep,300	
 			If ( diffpick = 1)
 			{
 				diffnormal()
+				GuiControl, 1:, MyProgress,%MyProgress%
+				
 			}
-			
+			sleep,300			
 			If ( diffpick = 2)
 			{
 				diffhard()
+				GuiControl, 1:, MyProgress,%MyProgress%
+				
 			}
 			
+			sleep,300
 			If ( diffpick  = 3)
 			{
 				diffverhard()
+				GuiControl, 1:, MyProgress,%MyProgress%
+				
 			}
 		}
 		
@@ -539,13 +589,14 @@ If (menuChoice = "Story COOP")
 		
 		levelup()		
 		
-		Randomad1()
+		
 		
 		GuiControl, 1:, MyProgress,%MyProgress%
 		
-		Randomad2()
-		Randomlist()
+		
+	;Randomlist()
 		Failsafe1()
+		Randomlist()
 		
 		
 		Random, SleepAmount, 1450, 2250
@@ -633,6 +684,6 @@ GuiClose:
 ExitApp
 
 F8::ExitApp
-F3::FindClick("dx")
+
 
 
