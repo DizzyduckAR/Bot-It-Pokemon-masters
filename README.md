@@ -5,6 +5,7 @@ no data saved / no data sent
 If *.exe give you false anti viruse you can download the *.exe from autohotkey and rename it to the script name it only run the code..
 
 Log:
+
 Pokemon masters V0.45
 
 *Bot it Use Postmassage to command the target mirror (no more mouse use)
