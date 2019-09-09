@@ -10,7 +10,7 @@ SetWorkingDir %A_ScriptDir%
 CoordMode, Pixel, Screen
 CoordMode, Mouse, Screen
 SendMode Input
-SetTitleMatchMode 2
+;SetTitleMatchMode 2
 SetTitleMatchMode Fast
 #WinActivateForce
 SetControlDelay 1
@@ -19,11 +19,11 @@ SetKeyDelay -1
 SetMouseDelay -1
 ;DetectHiddenWindows,On
 #SingleInstance force
-#SingleInstance ignore
-#SingleInstance off
+;#SingleInstance ignore
+;#SingleInstance off
 #NoTrayIcon
 
-global Random, SleepAmount, 500, 1250
+Random, SleepAmount, 500, 1000
 
 
 
@@ -135,7 +135,7 @@ If (menuChoice = "Levelup")
 		
 		;andomlist()
 		
-		Failsafe1()
+		;Failsafe1()
 		GuiControl, 1:, MyProgress,%MyProgress%
 		Randomlist()		
 		Sleep, %SleepAmount%

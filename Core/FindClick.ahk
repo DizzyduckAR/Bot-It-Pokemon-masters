@@ -9,8 +9,8 @@
 	GlobalSettingsLocation = %A_LineNumber%
 	;||||||||||||||||||||||||||||||||||| Misc. Global Script Settings |||||||||||||||||||||||||||||||||||
 	;----------------------------------------------------------------------------------------------------
-	DefaultDirs = %A_ScriptDir%                                                      ; Pipe (|) delimited list of default directories to search if file not found in working directory
-	DefaultExts = png                                                                                  ; Pipe (|) delimited list of file extensions to try appending to %ImageFile% if it is still not found in %DefaultDirs%
+	DefaultDirs = %A_Desktop%|%A_ScriptDir%|%A_Temp%                                                        ; Pipe (|) delimited list of default directories to search if file not found in working directory
+	DefaultExts = png|bmp                                                                                   ; Pipe (|) delimited list of file extensions to try appending to %ImageFile% if it is still not found in %DefaultDirs%
 	GuiA = 97                                                                                               ; Gui numbers to use for gui elements
 	GuiB = 98                                                                                               ; (Two guis are needed)
 	Literal := """"                                                                                         ; Character that is used to surround a string with spaces in the options parameter
@@ -30,12 +30,12 @@
 				; Each letter or letters is a flag that corresponds to one of the settings of the function. By default, each setting takes the value assigned in the first column below. You may change settings by including that flag in the Options parameter of the function. In this case the passed option will take the value assigned in the 2nd column below. Indicate any other value with a string immediately following the corresponding flag. Separate each flag and string pairing with a space.
 				;----------------------------------------------------------------------------------------------------
 				; DEFAULT                 USER DEFAULT                NAME OF OPTION
-				, o := "",                o_user := "*65"           ; ImageSearch Options
+				, o := "",                o_user := "*15"           ; ImageSearch Options
 				, a := "",                a_user := "m100"          ; Search Area Modifications
-				, r := "" targetwindow "",      r_user := "" targetwindow ""          ; Relative to Window Coords
+				, r := "" targetwindow "",                r_user := "" targetwindow ""             ; Relative to Window Coords
 				, x := 0,                 x_user := "Abs"           ; X Offset
 				, y := 0,                 y_user := "Abs"           ; Y Offset
-				, n := 1,                 n_user := 0               ; Number of Clicks (No Click)
+				, n := 0,                 n_user := 0               ; Number of Clicks (No Click)
 				, e := "",                e_user := 0.85            ; Find Every Image
 				, w := "",                w_user := "0,100"         ; Wait Until Image Is Found
 				, dx := "",               dx_user := "StartAt=#"    ; Diagnostic Mode
@@ -44,7 +44,7 @@
 				, Count := False,         Count_user := True        ; Return Found Count
 				, d := "",                d_user := "MousePos"      ; Direction of Search
 				, m := "Input",           m_user := "ControlClick"  ; SendMode
-				, Sleep := 1750,            Sleep_user := 0           ; Sleep Between Clicks
+				, Sleep := 20,            Sleep_user := 0           ; Sleep Between Clicks
 				, t := "",                t_user := "10%"           ; Image Tracking
 				, Silent := False,        Silent_user := True       ; No Dialogs
 				, Center := True,         Center_user := False      ; Start at Center of Image
