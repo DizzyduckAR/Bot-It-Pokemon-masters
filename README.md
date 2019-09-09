@@ -1,10 +1,18 @@
-# Pokemon Masters Bot-It v0.45
+# Pokemon Masters Bot-It v0.46
 
 Fully portable come with installer to easy screen the images while bot is running.
 no data saved / no data sent
 If *.exe give you false anti viruse you can download the *.exe from autohotkey and rename it to the script name it only run the code..
 
 Log:
+
+* Image click on canter
+* Remove offset from X no issue with low res anymore
+* Find Click connected and active on all calls
+* Global is back!! Option / Option 2 (o75 default can be move to o95 in both) 
+* Full baseline for image found tracking (need over night testing)
+
+
 
 Pokemon masters V0.45
 
