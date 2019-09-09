@@ -81,7 +81,7 @@ eventselectrandom1()
 	X_end := (X1 + W) 
 	Y_end :=  (Y1 + H)
 	
-	TargetExists := FindClick("img\random1.png ", Options, xCoord, ycoord)
+	TargetExists := FindClick("img\1random1.png ", Options, xCoord, ycoord)
 	if (TargetExists)
 	{
 		TrueX := (xCoord) - (X3)
