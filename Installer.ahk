@@ -23,6 +23,7 @@ Gui Add, Button, x382 y328 w80 h23 Vpic10, 10.png
 Gui Add, Button, x282 y38 w80 h23 Vpic11, 11.png
 Gui Add, Button, x282 y70 w80 h23 Vpic12, 12.png
 Gui Add, Button, x282 y103 w80 h23 Vpicup, up.png
+Gui Add, Button, x282 y137 w80 h23 VBotit13, Botit13.png
 Gui Add, Text, x26 y4 w423 h23 +0x200, Built in Screen Clipper.  Target the area just like the exemple image on Mirror/Emu
 Gui Add, Text, x10 y340 w366 h23 +0x200, Press Button see exemple image and Crop the area with Left mouse click
 Gui Add, Text, x289 y215 w61 h22 +0x200, Crop Target
@@ -232,7 +233,7 @@ Buttonrnd.png:
 Gui, Tab, 2
 ;Gui Add, Picture, x150 y150 , Image installer\img\rndm\rnd1.png
 ScreenCapture(location:="clipboard")
-SaveClipImgToFile("img/rnd.png")
+SaveClipImgToFile("img/rndm/rnd.png")
 Sleep, 3000
 MsgBox, Saved You muse set name in \img\rndm\rnd1-9.png
 Reload
@@ -268,6 +269,18 @@ ScreenCapture(location:="clipboard")
 SaveClipImgToFile("img/up.png")
 Sleep, 3000
 MsgBox, Saved up.png
+Reload
+return
+
+
+ButtonBotit13.png:
+Gui, Tab, 1
+Gui Add, Picture, x9 y31 w246 h292, Image installer\Botit13.png
+Gui Add, Picture, x285 y256 w67 h45 , Image installer\img\Botit13.png
+ScreenCapture(location:="clipboard")
+SaveClipImgToFile("img/Botit13.png")
+Sleep, 3000
+MsgBox, Saved Botit13.png
 Reload
 return
 

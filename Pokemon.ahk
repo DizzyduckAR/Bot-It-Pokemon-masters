@@ -33,7 +33,7 @@ Random, SleepAmount, 500, 1000
 Menu, Tray, Icon, Core\hoticon.png
 Gui Add, Text, x19 y4 w80 h19 +0x200, Target Window:
 Gui, Add, Edit, x100 y5 w100 h18 +0x200 vtargetwindow gsubmit_all, %targetwindow%
-Gui Add, DropDownList, x10 y71 w120  vmenuChoice gmenuItm , Levelup|Strike|Tech|Support|Story COOP|Random2|
+Gui Add, DropDownList, x10 y71 w120  vmenuChoice gmenuItm , Levelup|Strike|Tech|Support|Story COOP|Random Stage|
 Gui Add, DropDownList, x10 y41 w120 vGamechoice Choose1 , Normal||Hard|Very Hard|Random RAGE|
 Gui Add, Text, x10 y22 w36 h20 +0x200, Mode
 Gui Add, Progress, vMyProgress x10 y102 w120 h20 -Smooth  10,0
@@ -60,6 +60,7 @@ If (menuChoice = "Levelup")
 	
 	
 	Loop
+	
 	{
 		
 		start()
@@ -599,7 +600,7 @@ If (menuChoice = "Story COOP")
 		Randomlist()
 		
 		
-		Random, SleepAmount, 1450, 2250
+		
 		Sleep, %SleepAmount%
 		Sleep, %SleepAmount%
 		
@@ -610,80 +611,188 @@ If (menuChoice = "Story COOP")
 
 
 
-If (menuChoice = "Random2")
-{	
-	MsgBox, Start Random2 Course %Gamechoice%
-	Loop
-	{
-		
-		;test1()
+If (menuChoice = "Random Stage")
 	
+     {	
+		MsgBox, Start Random Course %Gamechoice%
+		Loop
+			
+		{
+			
+			GuiControl, 1:, MyProgress,%MyProgress%
+			start()
+			Sleep, %SleepAmount%
+			GuiControl, 1:, MyProgress,%MyProgress%
+			eventselect()
+			Sleep, %SleepAmount%
+			GuiControl, 1:, MyProgress,%MyProgress%
+			
+			If (Gamechoice = "Normal")
+				
+			{
+				diffnormal()
+				GuiControl, 1:, MyProgress,%MyProgress%
+				
+			}
+			sleep,300	
+			If (Gamechoice = "Hard")
+				
+			{
+				diffhard()
+				GuiControl, 1:, MyProgress,%MyProgress%
+				
+			}
+			sleep,300	
+			If (Gamechoice = "Very Hard")
+				
+			{
+				diffverhard()
+				GuiControl, 1:, MyProgress,%MyProgress%
+				
+			}
+			sleep,300	
+			If (Gamechoice = "Random RAGE")
+				
+			{
+				Random, diffpick, 1, 3
+			;Msgbox, %diffpick%
+				sleep,300	
+				If ( diffpick = 1)
+				{
+					diffnormal()
+					GuiControl, 1:, MyProgress,%MyProgress%
+					
+				}
+				sleep,300			
+				If ( diffpick = 2)
+				{
+					diffhard()
+					GuiControl, 1:, MyProgress,%MyProgress%
+					
+				}
+				
+				sleep,300
+				If ( diffpick  = 3)
+				{
+					diffverhard()
+					GuiControl, 1:, MyProgress,%MyProgress%
+					
+				}
+			}
+			
+			If (menuChoice = "Random Stage")
+				
+			{
+				Random, diffpick2, 1, 4
+			;Msgbox, %diffpick%
+				sleep,300	
+				If ( diffpick2 = 1)
+				{
+					train1()
+					GuiControl, 1:, MyProgress,%MyProgress%
+					
+				}
+				sleep,300			
+				If ( diffpick2 = 2)
+				{
+					train2()
+					GuiControl, 1:, MyProgress,%MyProgress%
+					
+				}
+				
+				sleep,300
+				If ( diffpick2  = 3)
+				{
+					train3()
+					GuiControl, 1:, MyProgress,%MyProgress%
+					
+				}	
+				
+				sleep,300
+				If ( diffpick2  = 4)
+				{
+					train4()
+					GuiControl, 1:, MyProgress,%MyProgress%
+					
+				}	
+				
+			}
+			
+			
+			go()
+			Sleep, %SleepAmount%
+			GuiControl, 1:, MyProgress,%MyProgress%
+			star()
+			Sleep, %SleepAmount%
+			GuiControl, 1:, MyProgress,%MyProgress%
+			RandomTraincontrol()
+			Sleep, %SleepAmount%			
+			GuiControl, 1:, MyProgress,%MyProgress%
+			
+		}
 		
-		
-	}
+     }
+
 	
-}
-
-
-
-
-
-
-IsPaused := false
-
-ButtonRestart:
-Reload
-return
-
-ButtonPause:
-
-if IsPaused
-{
-	Pause off
+	
+	
+	
+	
 	IsPaused := false
-	GuiControl,, PauseButton, Pause
-}
-
-else
-	SetTimer, Pause, 10
-return
-
-Pause:
-SetTimer, Pause, off
-IsPaused := true
-GuiControl,, PauseButton, Unpause
-Pause, on
-return
-
-
-
-
-
-F2::
-MouseGetPos,,,guideUnderCursor
-WinGetTitle, Title, ahk_id %guideUnderCursor%
+	
+	ButtonRestart:
+	Reload
+	return
+	
+	ButtonPause:
+	
+	if IsPaused
+	{
+		Pause off
+		IsPaused := false
+		GuiControl,, PauseButton, Pause
+	}
+	
+	else
+		SetTimer, Pause, 10
+	return
+	
+	Pause:
+	SetTimer, Pause, off
+	IsPaused := true
+	GuiControl,, PauseButton, Unpause
+	Pause, on
+	return
+	
+	
+	
+	
+	
+	F2::
+	MouseGetPos,,,guideUnderCursor
+	WinGetTitle, Title, ahk_id %guideUnderCursor%
 ;Msgbox, %Title%
-GuiControl,,targetwindow, %Title%
-Gosub,submit_all
-Return
-
-MyProgress:
-MyProgress ++
-
-Choose:
-Gui,Submit, Nohide
-return
-
-
-submit_all:
-Gui, Submit, Nohide
-return
-
-GuiEscape:
-GuiClose:
-ExitApp
-
-F8::ExitApp
-
-
-
+	GuiControl,,targetwindow, %Title%
+	Gosub,submit_all
+	Return
+	
+	MyProgress:
+	MyProgress ++
+	
+	Choose:
+	Gui,Submit, Nohide
+	return
+	
+	
+	submit_all:
+	Gui, Submit, Nohide
+	return
+	
+	GuiEscape:
+	GuiClose:
+	ExitApp
+	
+	F8::ExitApp
+	
+	
+	

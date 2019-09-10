@@ -418,7 +418,8 @@ go()
 		TrueX := (xCoord) - (X3)
 		TrueY := (ycoord)-(Y3) 
 		ControlClick2(TrueX, TrueY , targetwindow)
-		Sleep, %SleepAmount%		
+		Sleep, %SleepAmount%
+		sleep, 35000
 		return
 	}
 	
@@ -547,7 +548,7 @@ Randomlist()
 	
 	
 	CoordMode, Pixel, Screen
-	TargetExists := FindClick("img\rnd1.png", Options, xCoord, ycoord)
+	TargetExists := FindClick("img\rndm\rnd1.png", Options, xCoord, ycoord)
 	if (TargetExists)
 	{
 		TrueX := (xCoord) - (X3)
@@ -556,7 +557,7 @@ Randomlist()
 		Sleep, %SleepAmount%		
 		return
 	}	
-	TargetExists := FindClick("img\rnd2.png", Options, xCoord, ycoord)
+	TargetExists := FindClick("img\rndm\rnd2.png", Options, xCoord, ycoord)
 	if (TargetExists)
 	{
 		TrueX := (xCoord) - (X3)
@@ -565,7 +566,7 @@ Randomlist()
 		Sleep, %SleepAmount%		
 		return
 	}	
-	TargetExists := FindClick("img\rnd3.png", Options, xCoord, ycoord)
+	TargetExists := FindClick("img\rndm\rnd3.png", Options, xCoord, ycoord)
 	if (TargetExists)
 	{
 		TrueX := (xCoord) - (X3)
@@ -574,7 +575,7 @@ Randomlist()
 		Sleep, %SleepAmount%		
 		return
 	}	
-	TargetExists := FindClick("img\rnd4.png", Options, xCoord, ycoord)
+	TargetExists := FindClick("img\rndm\rnd4.png", Options, xCoord, ycoord)
 	if (TargetExists)
 	{
 		TrueX := (xCoord) - (X3)
@@ -583,7 +584,7 @@ Randomlist()
 		Sleep, %SleepAmount%		
 		return
 	}	
-	TargetExists := FindClick("img\rnd5.png", Options, xCoord, ycoord)
+	TargetExists := FindClick("img\rndm\rnd5.png", Options, xCoord, ycoord)
 	if (TargetExists)
 	{
 		TrueX := (xCoord) - (X3)
@@ -592,7 +593,7 @@ Randomlist()
 		Sleep, %SleepAmount%		
 		return
 	}	
-	TargetExists := FindClick("img\rnd6.png", Options, xCoord, ycoord)
+	TargetExists := FindClick("img\rndm\rnd6.png", Options, xCoord, ycoord)
 	if (TargetExists)
 	{
 		TrueX := (xCoord) - (X3)
@@ -601,7 +602,7 @@ Randomlist()
 		Sleep, %SleepAmount%		
 		return
 	}	
-	TargetExists := FindClick("img\rnd7.png", Options, xCoord, ycoord)
+	TargetExists := FindClick("img\rndm\rnd7.png", Options, xCoord, ycoord)
 	if (TargetExists)
 	{
 		TrueX := (xCoord) - (X3)
@@ -610,7 +611,7 @@ Randomlist()
 		Sleep, %SleepAmount%		
 		return
 	}	
-	TargetExists := FindClick("img\rnd8.png", Options, xCoord, ycoord)
+	TargetExists := FindClick("img\rndm\rnd8.png", Options, xCoord, ycoord)
 	if (TargetExists)
 	{
 		TrueX := (xCoord) - (X3)
@@ -619,7 +620,7 @@ Randomlist()
 		Sleep, %SleepAmount%		
 		return
 	}	
-	TargetExists := FindClick("img\rnd9.png", Options, xCoord, ycoord)
+	TargetExists := FindClick("img\rndm\rnd9.png", Options, xCoord, ycoord)
 	if (TargetExists)
 	{
 		TrueX := (xCoord) - (X3)
@@ -669,16 +670,35 @@ Randomlist()
 		}
 	}
 
-Truex()
+RandomTraincontrol()
 	{
-		TrueX := (xCoord) - (X3)
-		TrueY := (ycoord)-(Y3) 
+		WinGetPos, X3, Y3, Width1, Height1, %targetwindow% 
+		X1 := X3
+		Y1 := Y3
+		W1 := Width1
+		H1 := Height1
+		X_end := (X1 + W) 
+		Y_end :=  (Y1 + H)
 		
-		;MsgBox,  %xCoord% , %ycoord% %TrueX% %TrueY%
-		ControlClick2(TrueX, TrueY , targetwindow)
-		Sleep, %SleepAmount%		
-		return
-}
+		TargetExists := FindClick("img\12.png", Options, xCoord, ycoord)
+		if (TargetExists)
+		{
+			TrueX := (xCoord) - (X3)
+			TrueY := (ycoord)-(Y3) 
+			ControlClick2(TrueX, TrueY , targetwindow)
+			Sleep, %SleepAmount%
+			Sleep, 7000
+			TargetExists := FindClick("img\Botit13.png", Options, xCoord, ycoord)
+			if (TargetExists)
+				
+			{
+				TrueX := (xCoord) - (X3)
+			TrueY := (ycoord)-(Y3) 
+			ControlClick2(TrueX, TrueY , targetwindow)
+			return
+			}
+		}
+	}
 
 
 #Include Core\controlclick.ahk
