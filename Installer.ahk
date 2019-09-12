@@ -24,9 +24,11 @@ Gui Add, Button, x282 y38 w80 h23 Vpic11, 11.png
 Gui Add, Button, x282 y70 w80 h23 Vpic12, 12.png
 Gui Add, Button, x282 y103 w80 h23 Vpicup, up.png
 Gui Add, Button, x282 y137 w80 h23 VBotit13, Botit13.png
+Gui Add, Button, x282 y167 w80 h23 VBotit14, Botit14.png
+Gui Add, Button, x282 y197 w80 h23 VBotit15, Botit15.png
 Gui Add, Text, x26 y4 w423 h23 +0x200, Built in Screen Clipper.  Target the area just like the exemple image on Mirror/Emu
 Gui Add, Text, x10 y340 w366 h23 +0x200, Press Button see exemple image and Crop the area with Left mouse click
-Gui Add, Text, x289 y215 w61 h22 +0x200, Crop Target
+Gui Add, Text, x289 y225 w61 h22 +0x200, Crop Target
 Gui Show, w476 h371, Clipper Tool Bot-It
 Gui Add, Button, x282 y314 w80 h23, Refresh
 
@@ -281,6 +283,28 @@ ScreenCapture(location:="clipboard")
 SaveClipImgToFile("img/Botit13.png")
 Sleep, 3000
 MsgBox, Saved Botit13.png
+Reload
+return
+
+ButtonBotit14.png:
+Gui, Tab, 1
+Gui Add, Picture, x9 y31 w246 h292, Image installer\9.png
+Gui Add, Picture, x285 y256 w67 h45 , Image installer\img\Botit14.png
+ScreenCapture(location:="clipboard")
+SaveClipImgToFile("img/Botit14.png")
+Sleep, 3000
+MsgBox, Saved Botit14.png
+Reload
+return
+
+ButtonBotit15.png:
+Gui, Tab, 1
+Gui Add, Picture, x9 y31 w246 h292, Image installer\9.png
+Gui Add, Picture, x285 y256 w67 h45 , Image installer\img\Botit15.png
+ScreenCapture(location:="clipboard")
+SaveClipImgToFile("img/Botit15.png")
+Sleep, 3000
+MsgBox, Saved Botit15.png
 Reload
 return
 

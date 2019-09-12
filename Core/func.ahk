@@ -693,13 +693,77 @@ RandomTraincontrol()
 				
 			{
 				TrueX := (xCoord) - (X3)
-			TrueY := (ycoord)-(Y3) 
-			ControlClick2(TrueX, TrueY , targetwindow)
-			return
+				TrueY := (ycoord)-(Y3) 
+				ControlClick2(TrueX, TrueY , targetwindow)
+				return
 			}
 		}
-	}
+}
 
+Dragcontrol()
+{
+	WinGetPos, X3, Y3, Width1, Height1, %targetwindow% 
+	X1 := X3
+	Y1 := Y3
+	W1 := Width1
+	H1 := Height1
+	X_end := (X1 + W1) 
+	Y_end :=  (Y1 + H1)
+	
+	
+	randomstart1()
+	
+	CoordMode, Pixel, Screen	
+	ImageSearch, FoundX, FoundY, %X1%, %Y1%, %X_end%, %Y_end%, *75 img\randomstage1.png ;Main Story coop
+	If ErrorLevel = 1
+		
+	{
+		;MsgBox,1
+		sleep,1500
+		CoordMode, Pixel, Screen	
+		ImageSearch, FoundX, FoundY, %X1%, %Y1%, %X_end%, %Y_end%, *75 img\Botit14.png ;Main Story coop
+		If ErrorLevel = 0
+		{
+			;MsgBox,2
+			sleep,1500
+			CoordMode, Pixel, Screen	
+			ImageSearch, FoundX, FoundY, %X1%, %Y1%, %X_end%, %Y_end%, *55 img\Botit15.png ;control point
+			If ErrorLevel = 0
+				Loop,3
+				{
+					DragY := FoundY + 600
+				;MsgBox, %DragY%
+				     MouseClickDrag,L , %FoundX% ,%FoundY% ,%FoundX% ,%DragY% ,50, %targetwindow%
+				;	MouseClick, Left , %FoundX%, %FoundY% , 2,,D , %targetwindow%
+					MouseMove, %FoundX%, %DragY% , 50
+					MouseMove, %FoundX%, %DragY% , 50
+					TargetExists := FindClick("img\randomstart1.png", Options, xCoord, ycoord)
+					if (TargetExists)
+					{
+						TrueX := (xCoord) - (X3)
+						TrueY := (ycoord)-(Y3) 
+						
+						
+						;ControlClick5(TrueX, TrueY , targetwindow)
+						;ControlClick6(TrueX, DragY , targetwindow)
+						Sleep, %SleepAmount%		
+						return
+					}
+					return
+				}
+			
+		}
+		
+	}	
+	
+	
+	
+	
+	
+	
+	
+	
+}
 
 #Include Core\controlclick.ahk
 #Include Core\FindClick.ahk

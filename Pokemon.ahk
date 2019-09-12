@@ -23,7 +23,7 @@ SetMouseDelay -1
 ;#SingleInstance off
 #NoTrayIcon
 
-Random, SleepAmount, 500, 1000
+Random, SleepAmount, 500, 750
 
 
 
@@ -33,7 +33,7 @@ Random, SleepAmount, 500, 1000
 Menu, Tray, Icon, Core\hoticon.png
 Gui Add, Text, x19 y4 w80 h19 +0x200, Target Window:
 Gui, Add, Edit, x100 y5 w100 h18 +0x200 vtargetwindow gsubmit_all, %targetwindow%
-Gui Add, DropDownList, x10 y71 w120  vmenuChoice gmenuItm , Levelup|Strike|Tech|Support|Story COOP|Random Stage|
+Gui Add, DropDownList, x10 y71 w120  vmenuChoice gmenuItm , Levelup|Strike|Tech|Support|Story COOP|Random Stage|COOP Drag
 Gui Add, DropDownList, x10 y41 w120 vGamechoice Choose1 , Normal||Hard|Very Hard|Random RAGE|
 Gui Add, Text, x10 y22 w36 h20 +0x200, Mode
 Gui Add, Progress, vMyProgress x10 y102 w120 h20 -Smooth  10,0
@@ -41,7 +41,7 @@ Gui Add, Button, x158 y32 w49 h31 , &Pause
 Gui Add, Button, x222 y32 w49 h31, &Restart
 Gui Add, Link, x230 y102 w47 h19, <a href="https://discord.gg/CUgnVpk">Discord</a>
 Gui Add, Picture, x188 y90 w32 h32, Core\2.png
-Gui Show, w279 h126, Pokemon Masters
+Gui Show, w279 h126, Pokemon v0.4.7
 Menu, Tray, Icon, Core\hoticon.png
 Return
 
@@ -60,16 +60,19 @@ If (menuChoice = "Levelup")
 	
 	
 	Loop
-	
+		
 	{
 		
 		start()
+		Sleep, %SleepAmount%
 		GuiControl, 1:, MyProgress,%MyProgress%	
 		
 		eventselect()
+		Sleep, %SleepAmount%
 		GuiControl, 1:, MyProgress,%MyProgress%
 		
 		train1()
+		Sleep, %SleepAmount%
 		GuiControl, 1:, MyProgress,%MyProgress%
 		
 		Sleep, %SleepAmount%
@@ -121,25 +124,30 @@ If (menuChoice = "Levelup")
 			}
 		}
 		
-		go()		
+		go()
+		Sleep, %SleepAmount%
 		GuiControl, 1:, MyProgress,%MyProgress%
 		
 		star()
+		Sleep, %SleepAmount%
 		GuiControl, 1:, MyProgress,%MyProgress%
 		
 		ok()
+		Sleep, %SleepAmount%
 		GuiControl, 1:, MyProgress,%MyProgress%
 		
 		
 		levelup()
+		Sleep, %SleepAmount%
 		GuiControl, 1:, MyProgress,%MyProgress%
 		
 		;andomlist()
 		
 		;Failsafe1()
 		GuiControl, 1:, MyProgress,%MyProgress%
-		Randomlist()		
-		Sleep, %SleepAmount%
+		Randomlist()
+		Failsafe1()
+		
 		Sleep, %SleepAmount%
 		
 	}
@@ -151,20 +159,18 @@ If (menuChoice = "Strike")
 	
 	Loop
 	{
-		Random, SleepAmount, 1450, 2250
+		
 		
 		GuiControl, 1:, MyProgress,%MyProgress%
-		
 		start()
-		
+		Sleep, %SleepAmount%
 		GuiControl, 1:, MyProgress,%MyProgress%
-		
+		Sleep, %SleepAmount%
 		eventselect()
-		
 		GuiControl, 1:, MyProgress,%MyProgress%
-		
+		Sleep, %SleepAmount%
 		train2()
-		
+		Sleep, %SleepAmount%
 		GuiControl, 1:, MyProgress,%MyProgress%
 		
 		
@@ -224,19 +230,19 @@ If (menuChoice = "Strike")
 		GuiControl, 1:, MyProgress,%MyProgress%
 		
 		go()
-		
+		Sleep, %SleepAmount%
 		GuiControl, 1:, MyProgress,%MyProgress%
-		
+		Sleep, %SleepAmount%
 		star()
 		
 		GuiControl, 1:, MyProgress,%MyProgress%
-		
+		Sleep, %SleepAmount%
 		ok()
 		
 		GuiControl, 1:, MyProgress,%MyProgress%
 		
 		levelup()
-		
+		Sleep, %SleepAmount%
 		GuiControl, 1:, MyProgress,%MyProgress%
 		
 		;Randoms
@@ -250,7 +256,7 @@ If (menuChoice = "Strike")
 		
 		
 		GuiControl, 1:, MyProgress,%MyProgress%
-		Sleep, %SleepAmount%
+		
 		Sleep, %SleepAmount%
 		
 		
@@ -271,15 +277,15 @@ If (menuChoice = "Tech")
 		GuiControl, 1:, MyProgress,%MyProgress%
 		
 		start()
-		
+		Sleep, %SleepAmount%
 		GuiControl, 1:, MyProgress,%MyProgress%
 		
 		eventselect()
-		
+		Sleep, %SleepAmount%
 		GuiControl, 1:, MyProgress,%MyProgress%
 		
 		train3()
-		
+		Sleep, %SleepAmount%
 		GuiControl, 1:, MyProgress,%MyProgress%
 		
 		
@@ -339,19 +345,19 @@ If (menuChoice = "Tech")
 		GuiControl, 1:, MyProgress,%MyProgress%
 		
 		go()
-		
+		Sleep, %SleepAmount%
 		GuiControl, 1:, MyProgress,%MyProgress%
 		
 		star()
-		
+		Sleep, %SleepAmount%
 		GuiControl, 1:, MyProgress,%MyProgress%
 		
 		ok()
-		
+		Sleep, %SleepAmount%
 		GuiControl, 1:, MyProgress,%MyProgress%
 		
 		levelup()
-		
+		Sleep, %SleepAmount%
 		GuiControl, 1:, MyProgress,%MyProgress%
 		
 		;Randoms
@@ -383,15 +389,15 @@ If (menuChoice = "Support")
 		GuiControl, 1:, MyProgress,%MyProgress%
 		
 		start()
-		
+		Sleep, %SleepAmount%
 		GuiControl, 1:, MyProgress,%MyProgress%
 		
 		eventselect()
-		
+		Sleep, %SleepAmount%
 		GuiControl, 1:, MyProgress,%MyProgress%
 		
 		train4()
-		
+		Sleep, %SleepAmount%
 		GuiControl, 1:, MyProgress,%MyProgress%
 		
 		
@@ -451,19 +457,19 @@ If (menuChoice = "Support")
 		GuiControl, 1:, MyProgress,%MyProgress%
 		
 		go()
-		
+		Sleep, %SleepAmount%
 		GuiControl, 1:, MyProgress,%MyProgress%
 		
 		star()
-		
+		Sleep, %SleepAmount%
 		GuiControl, 1:, MyProgress,%MyProgress%
 		
 		ok()
-		
+		Sleep, %SleepAmount%
 		GuiControl, 1:, MyProgress,%MyProgress%
 		
 		levelup()
-		
+		Sleep, %SleepAmount%
 		GuiControl, 1:, MyProgress,%MyProgress%
 		
 		;Randoms
@@ -479,7 +485,7 @@ If (menuChoice = "Support")
 		GuiControl, 1:, MyProgress,%MyProgress%
 		
 		
-		Random, SleepAmount, 1450, 2250
+		
 		Sleep, %SleepAmount%
 		Sleep, %SleepAmount%
 		
@@ -497,21 +503,20 @@ If (menuChoice = "Story COOP")
 		GuiControl, 1:, MyProgress,%MyProgress%
 		
 		start()
-		
+		Sleep, %SleepAmount%
 		GuiControl, 1:, MyProgress,%MyProgress%
 		
 		eventselectrandom1() ;random1.png  coop
-		
+		Sleep, %SleepAmount%
 		GuiControl, 1:, MyProgress,%MyProgress%
 		
 		randomstage1()		;randomstage1.png story
-		
+		Sleep, %SleepAmount%
 		GuiControl, 1:, MyProgress,%MyProgress%
 		
-		randomlvl1()
-		
+		randomstart1() 
+		Sleep, %SleepAmount%
 		GuiControl, 1:, MyProgress,%MyProgress%
-		
 		
 		If (Gamechoice = "Normal")
 			
@@ -568,28 +573,26 @@ If (menuChoice = "Story COOP")
 		
 		GuiControl, 1:, MyProgress,%MyProgress%
 		
-		randomstart1() 
 		
-		GuiControl, 1:, MyProgress,%MyProgress%
 		
 		randomok1()
-		
+		Sleep, %SleepAmount%
 		GuiControl, 1:, MyProgress,%MyProgress%
 		
 		go()
-		
+		Sleep, %SleepAmount%
 		GuiControl, 1:, MyProgress,%MyProgress%
 		
 		star()
-		
+		Sleep, %SleepAmount%
 		GuiControl, 1:, MyProgress,%MyProgress%
 		
 		ok()
-		
+		Sleep, %SleepAmount%
 		GuiControl, 1:, MyProgress,%MyProgress%
 		
 		levelup()		
-		
+		Sleep, %SleepAmount%
 		
 		
 		GuiControl, 1:, MyProgress,%MyProgress%
@@ -729,13 +732,142 @@ If (menuChoice = "Random Stage")
 			Sleep, %SleepAmount%			
 			GuiControl, 1:, MyProgress,%MyProgress%
 			
+			
+			
+			Failsafe1()
+			Randomlist()
+			
+			Sleep, %SleepAmount%
+			Sleep, %SleepAmount%
 		}
 		
-     }
+	}
 
+
+If (menuChoice = "COOP Drag")
+{	
+	MsgBox, Start Story COOP & drag control %Gamechoice%	
+	Loop
+	{
+		GuiControl, 1:, MyProgress,%MyProgress%
+		
+		start()
+		Sleep, %SleepAmount%
+		GuiControl, 1:, MyProgress,%MyProgress%
+		
+		eventselectrandom1() ;random1.png  coop
+		Sleep, %SleepAmount%
+		GuiControl, 1:, MyProgress,%MyProgress%
+		
+		randomstage1()		;randomstage1.png story
+		Sleep, %SleepAmount%
+		GuiControl, 1:, MyProgress,%MyProgress%
+		
+		randomstart1() 
+		Sleep, %SleepAmount%
+		GuiControl, 1:, MyProgress,%MyProgress%
+		
+		Dragcontrol()
+		Sleep, %SleepAmount%
+		GuiControl, 1:, MyProgress,%MyProgress%
+		
+		If (Gamechoice = "Normal")
+			
+		{
+			diffnormal()
+			GuiControl, 1:, MyProgress,%MyProgress%
+			
+		}
+		sleep,300	
+		If (Gamechoice = "Hard")
+			
+		{
+			diffhard()
+			GuiControl, 1:, MyProgress,%MyProgress%
+			
+		}
+		sleep,300	
+		If (Gamechoice = "Very Hard")
+			
+		{
+			diffverhard()
+			GuiControl, 1:, MyProgress,%MyProgress%
+			
+		}
+		sleep,300	
+		If (Gamechoice = "Random RAGE")
+			
+		{
+			Random, diffpick, 1, 3
+			;Msgbox, %diffpick%
+			sleep,300	
+			If ( diffpick = 1)
+			{
+				diffnormal()
+				GuiControl, 1:, MyProgress,%MyProgress%
+				
+			}
+			sleep,300			
+			If ( diffpick = 2)
+			{
+				diffhard()
+				GuiControl, 1:, MyProgress,%MyProgress%
+				
+			}
+			
+			sleep,300
+			If ( diffpick  = 3)
+			{
+				diffverhard()
+				GuiControl, 1:, MyProgress,%MyProgress%
+				
+			}
+		}
+		
+		GuiControl, 1:, MyProgress,%MyProgress%
+		
+		
+		
+		randomok1()
+		Sleep, %SleepAmount%
+		GuiControl, 1:, MyProgress,%MyProgress%
+		
+		go()
+		Sleep, %SleepAmount%
+		GuiControl, 1:, MyProgress,%MyProgress%
+		
+		star()
+		Sleep, %SleepAmount%
+		GuiControl, 1:, MyProgress,%MyProgress%
+		
+		ok()
+		Sleep, %SleepAmount%
+		GuiControl, 1:, MyProgress,%MyProgress%
+		
+		levelup()		
+		Sleep, %SleepAmount%
+		
+		
+		GuiControl, 1:, MyProgress,%MyProgress%
+		
+		
+	;Randomlist()
+		Failsafe1()
+		Randomlist()
+		
+		
+		
+		Sleep, %SleepAmount%
+		Sleep, %SleepAmount%
+		
+	}
 	
-	
-	
+}
+
+
+
+
+
 	
 	
 	IsPaused := false

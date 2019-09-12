@@ -21,6 +21,25 @@ ControlClick3(X, Y, WinTitle="", WinText="", ExcludeTitle="", ExcludeText="")
 	
 }
 
+ControlClick5(X, Y, WinTitle="", WinText="", ExcludeTitle="", ExcludeText="")  
+{  
+	hwnd:=ControlFromPoint(X, Y, WinTitle, WinText, cX, cY, ExcludeTitle, ExcludeText)  
+	PostMessage, 0x200, 0, cX&0xFFFF | cY<<16,, ahk_id %hwnd% 
+	PostMessage, 0x240, 2, cX&0xFFFF | cY<<16,, ahk_id %hwnd% 
+	;'PostMessage, 0x204, 2, cX&0xFFFF | cY<<16,, ahk_id %hwnd%  
+	;PostMessage, 0x205, 0, cX&0xFFFF | cY<<16,, ahk_id %hwnd% 
+	
+}
+ControlClick6(X, Y, WinTitle="", WinText="", ExcludeTitle="", ExcludeText="")  
+{  
+	hwnd:=ControlFromPoint(X, Y, WinTitle, WinText, cX, cY, ExcludeTitle, ExcludeText)  
+	PostMessage, 0x200, 0, cX&0xFFFF | cY<<16,, ahk_id %hwnd% 
+	PostMessage, 0x200, 0, cX&0xFFFF | cY<<16,, ahk_id %hwnd%
+	;'PostMessage, 0x204, 2, cX&0xFFFF | cY<<16,, ahk_id %hwnd%  
+	;PostMessage, 0x205, 0, cX&0xFFFF | cY<<16,, ahk_id %hwnd% 
+	
+}
+
 
 ControlFromPoint(X, Y, WinTitle="", WinText="", ByRef cX="", ByRef cY="", ExcludeTitle="", ExcludeText="")
 {
