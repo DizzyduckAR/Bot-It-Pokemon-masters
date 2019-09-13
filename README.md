@@ -1,4 +1,11 @@
-# Pokemon Masters Bot-It v0.46
+# Pokemon Masters Bot-It v0.4.75
+
+For anyone who wanna move to 0.4.75 with old img dir.
+YOU MUST Run Bot-it Image Rename.bat Once.
+It will conver ya to the new Botit format alone
+
+We prep for Background Windows Scan with GrayScale ON
+
 
 Fully portable come with installer to easy screen the images while bot is running.
 no data saved / no data sent
