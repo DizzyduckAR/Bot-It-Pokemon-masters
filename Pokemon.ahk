@@ -41,7 +41,7 @@ Gui Add, Button, x158 y32 w49 h31 , &Pause
 Gui Add, Button, x222 y32 w49 h31, &Restart
 Gui Add, Link, x230 y102 w47 h19, <a href="https://discord.gg/CUgnVpk">Discord</a>
 Gui Add, Picture, x188 y90 w32 h32, Core\2.png
-Gui Show, w279 h126, Pokemon v0.4.7.44
+Gui Show, w279 h126, Pokemon v0.4.7.45
 Menu, Tray, Icon, Core\hoticon.png
 Return
 

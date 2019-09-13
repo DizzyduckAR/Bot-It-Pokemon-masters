@@ -6,7 +6,7 @@
 
 global targetwindow := "F2 to grab window" ;Window name
 global Random, SleepAmount, 1550, 2150
-global Options := "o75 n dx r" ; image miss % options 1-254 "o65"
+global Options := "o75 n silent r" ; image miss % options 1-254 "o65"
 global Options2 := "o75 n silent r" ; image list miss % options 1-254 "o35"
 
 
