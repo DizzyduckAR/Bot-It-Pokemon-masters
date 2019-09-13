@@ -5,8 +5,8 @@
 
 
 global targetwindow := "F2 to grab window" ;Window name
-global Random, SleepAmount, 1250, 2150
-global Options := "o75 n silent r" ; image miss % options 1-254 "o65"
+global Random, SleepAmount, 1550, 2150
+global Options := "o75 n dx r" ; image miss % options 1-254 "o65"
 global Options2 := "o75 n silent r" ; image list miss % options 1-254 "o35"
 
 
@@ -14,7 +14,7 @@ global Options2 := "o75 n silent r" ; image list miss % options 1-254 "o35"
 
 
 
-start()
+Botit1()
 {
 	
 	WinGetPos, X3, Y3, Width1, Height1, %targetwindow% 
@@ -25,7 +25,7 @@ start()
 	X_end := (X1 + W) 
 	Y_end :=  (Y1 + H)
 	
-	TargetExists := FindClick("img\1.png", Options, xCoord, ycoord)
+	TargetExists := FindClick("img\Botit1.png", Options, xCoord, ycoord)
 	if (TargetExists)
 	{
 		TrueX := (xCoord) - (X3)
@@ -41,7 +41,8 @@ start()
 }
 
 
-eventselect()
+
+Botit2()
 {
 	
 	
@@ -53,7 +54,7 @@ eventselect()
 	X_end := (X1 + W) 
 	Y_end :=  (Y1 + H)
 	
-	TargetExists := FindClick("img\2.png", Options, xCoord, ycoord)
+	TargetExists := FindClick("img\Botit2.png", Options, xCoord, ycoord)
 	if (TargetExists)
 	{
 		TrueX := (xCoord) - (X3)
@@ -69,7 +70,8 @@ eventselect()
 
 
 
-eventselectrandom1()
+Botit17()
+
 {
 	
 	
@@ -81,7 +83,7 @@ eventselectrandom1()
 	X_end := (X1 + W) 
 	Y_end :=  (Y1 + H)
 	
-	TargetExists := FindClick("img\1random1.png ", Options, xCoord, ycoord)
+	TargetExists := FindClick("img\Botit17.png ", Options, xCoord, ycoord)
 	if (TargetExists)
 	{
 		TrueX := (xCoord) - (X3)
@@ -97,7 +99,10 @@ eventselectrandom1()
 }	
 
 
-eventselectrandom2()
+
+
+
+Botit3()
 {
 	
 	
@@ -109,33 +114,7 @@ eventselectrandom2()
 	X_end := (X1 + W) 
 	Y_end :=  (Y1 + H)
 	
-	TargetExists := FindClick("img\2random1.png ", Options, xCoord, ycoord)
-	if (TargetExists)
-	{
-		TrueX := (xCoord) - (X3)
-		TrueY := (ycoord)-(Y3) 
-		ControlClick2(TrueX, TrueY , targetwindow)
-		Sleep, %SleepAmount%		
-		return
-	}
-	
-}	
-
-
-
-train1()
-{
-	
-	
-	WinGetPos, X3, Y3, Width1, Height1, %targetwindow% 
-	X1 := X3
-	Y1 := Y3
-	W1 := Width1
-	H1 := Height1
-	X_end := (X1 + W) 
-	Y_end :=  (Y1 + H)
-	
-	TargetExists := FindClick("img\3.png", Options, xCoord, ycoord)
+	TargetExists := FindClick("img\Botit3.png", Options, xCoord, ycoord)
 	if (TargetExists)
 	{
 		TrueX := (xCoord) - (X3)
@@ -148,7 +127,8 @@ train1()
 	
 }	
 
-train4()
+
+Botit6()
 {
 	
 	
@@ -160,7 +140,7 @@ train4()
 	X_end := (X1 + W) 
 	Y_end :=  (Y1 + H)
 	
-	TargetExists := FindClick("img\6.png", Options, xCoord, ycoord)
+	TargetExists := FindClick("img\Botit6.png", Options, xCoord, ycoord)
 	if (TargetExists)
 	{
 		TrueX := (xCoord) - (X3)
@@ -172,7 +152,8 @@ train4()
 	
 }	
 
-train2()
+
+Botit4()
 {
 	
 	
@@ -184,7 +165,7 @@ train2()
 	X_end := (X1 + W) 
 	Y_end :=  (Y1 + H)
 	
-	TargetExists := FindClick("img\4.png", Options, xCoord, ycoord)
+	TargetExists := FindClick("img\Botit4.png", Options, xCoord, ycoord)
 	if (TargetExists)
 	{
 		TrueX := (xCoord) - (X3)
@@ -197,7 +178,7 @@ train2()
 	
 }	
 
-train3()
+Botit5()
 {
 	
 	
@@ -209,7 +190,7 @@ train3()
 	X_end := (X1 + W) 
 	Y_end :=  (Y1 + H)
 	
-	TargetExists := FindClick("img\5.png", Options, xCoord, ycoord)
+	TargetExists := FindClick("img\Botit5.png", Options, xCoord, ycoord)
 	if (TargetExists)
 	{
 		TrueX := (xCoord) - (X3)
@@ -223,7 +204,8 @@ train3()
 }	
 
 
-randomstage1()
+
+Botit18()
 {
 	
 	
@@ -235,7 +217,34 @@ randomstage1()
 	X_end := (X1 + W) 
 	Y_end :=  (Y1 + H)
 	
-	TargetExists := FindClick("img\randomstage1.png", Options, xCoord, ycoord)
+	TargetExists := FindClick("img\Botit18.png", Options, xCoord, ycoord)
+	if (TargetExists)
+	{
+		TrueX := (xCoord) - (X3)
+		TrueY := (ycoord)-(Y3) 
+		ControlClick2(TrueX, TrueY , targetwindow)
+		Sleep, %SleepAmount%		
+		return
+	}
+	
+}	
+
+	
+
+
+Botit7()
+{
+	
+	
+	WinGetPos, X3, Y3, Width1, Height1, %targetwindow% 
+	X1 := X3
+	Y1 := Y3
+	W1 := Width1
+	H1 := Height1
+	X_end := (X1 + W) 
+	Y_end :=  (Y1 + H)
+	
+	TargetExists := FindClick("img\Botit7.png", Options, xCoord, ycoord)
 	if (TargetExists)
 	{
 		TrueX := (xCoord) - (X3)
@@ -248,7 +257,8 @@ randomstage1()
 }	
 
 
-randomstage2()
+
+Botit8()
 {
 	
 	
@@ -260,57 +270,7 @@ randomstage2()
 	X_end := (X1 + W) 
 	Y_end :=  (Y1 + H)
 	
-	
-	TargetExists := FindClick("img\randomstage2.png", Options, xCoord, ycoord)
-	if (TargetExists)
-	{
-		TrueX := (xCoord) - (X3)
-		TrueY := (ycoord)-(Y3) 
-		ControlClick2(TrueX, TrueY , targetwindow)
-		Sleep, %SleepAmount%		
-		return
-	}
-	
-}	
-
-diffverhard()
-{
-	
-	
-	WinGetPos, X3, Y3, Width1, Height1, %targetwindow% 
-	X1 := X3
-	Y1 := Y3
-	W1 := Width1
-	H1 := Height1
-	X_end := (X1 + W) 
-	Y_end :=  (Y1 + H)
-	
-	TargetExists := FindClick("img\7.png", Options, xCoord, ycoord)
-	if (TargetExists)
-	{
-		TrueX := (xCoord) - (X3)
-		TrueY := (ycoord)-(Y3) 
-		ControlClick2(TrueX, TrueY , targetwindow)
-		Sleep, %SleepAmount%		
-		return
-	}
-	
-}	
-
-
-diffhard()
-{
-	
-	
-	WinGetPos, X3, Y3, Width1, Height1, %targetwindow% 
-	X1 := X3
-	Y1 := Y3
-	W1 := Width1
-	H1 := Height1
-	X_end := (X1 + W) 
-	Y_end :=  (Y1 + H)
-	
-	TargetExists := FindClick("img\8.png", Options, xCoord, ycoord)
+	TargetExists := FindClick("img\Botit8.png", Options, xCoord, ycoord)
 	if (TargetExists)
 	{
 		TrueX := (xCoord) - (X3)
@@ -325,7 +285,8 @@ diffhard()
 }	
 
 
-diffnormal()
+
+Botit9()
 {
 	
 	
@@ -337,7 +298,7 @@ diffnormal()
 	X_end := (X1 + W) 
 	Y_end :=  (Y1 + H)
 	
-	TargetExists := FindClick("img\9.png", Options, xCoord, ycoord)
+	TargetExists := FindClick("img\Botit9.png", Options, xCoord, ycoord)
 	if (TargetExists)
 	{
 		TrueX := (xCoord) - (X3)
@@ -350,32 +311,12 @@ diffnormal()
 	
 }	
 
-randomlvl1()
-{
-	
-	
-	WinGetPos, X3, Y3, Width1, Height1, %targetwindow% 
-	X1 := X3
-	Y1 := Y3
-	W1 := Width1
-	H1 := Height1
-	X_end := (X1 + W) 
-	Y_end :=  (Y1 + H)
-	
-	TargetExists := FindClick("img\randomlvl1.png", Options, xCoord, ycoord)
-	if (TargetExists)
-	{
-		TrueX := (xCoord) - (X3)
-		TrueY := (ycoord)-(Y3) 
-		ControlClick2(TrueX, TrueY , targetwindow)
-		Sleep, %SleepAmount%		
-		return
-	}
-	
-}	
 
 
-ok()
+
+
+
+Botit12()
 {
 	WinGetPos, X3, Y3, Width1, Height1, %targetwindow% 
 	X1 := X3
@@ -385,7 +326,7 @@ ok()
 	X_end := (X1 + W) 
 	Y_end :=  (Y1 + H)
 	
-	TargetExists := FindClick("img\12.png", Options, xCoord, ycoord)
+	TargetExists := FindClick("img\Botit12.png", Options, xCoord, ycoord)
 	if (TargetExists)
 	{
 		TrueX := (xCoord) - (X3)
@@ -399,7 +340,8 @@ ok()
 }
 
 
-go()
+
+Botit10()
 {
 	
 	
@@ -412,7 +354,7 @@ go()
 	Y_end :=  (Y1 + H)
 	
 	
-	TargetExists := FindClick("img\10.png", Options, xCoord, ycoord)
+	TargetExists := FindClick("img\Botit10.png", Options, xCoord, ycoord)
 	if (TargetExists)
 	{
 		TrueX := (xCoord) - (X3)
@@ -429,7 +371,8 @@ go()
 
 
 
-star()
+
+Botit11()
 {
 	
 	
@@ -441,7 +384,7 @@ star()
 	X_end := (X1 + W) 
 	Y_end :=  (Y1 + H)
 	
-	TargetExists := FindClick("img\11.png", Options, xCoord, ycoord)
+	TargetExists := FindClick("img\Botit11.png", Options, xCoord, ycoord)
 	if (TargetExists)
 	{
 		TrueX := (xCoord) - (X3)
@@ -456,7 +399,8 @@ star()
 
 
 
-randomstart1()
+
+Botit19()
 {
 	
 	WinGetPos, X3, Y3, Width1, Height1, %targetwindow% 
@@ -467,7 +411,7 @@ randomstart1()
 	X_end := (X1 + W) 
 	Y_end :=  (Y1 + H)
 	
-	TargetExists := FindClick("img\randomstart1.png", Options, xCoord, ycoord)
+	TargetExists := FindClick("img\Botit19.png", Options, xCoord, ycoord)
 	if (TargetExists)
 	{
 		TrueX := (xCoord) - (X3)
@@ -480,7 +424,8 @@ randomstart1()
 }
 
 
-randomok1()
+
+Botit20()
 {
 	
 	WinGetPos, X3, Y3, Width1, Height1, %targetwindow% 
@@ -491,7 +436,7 @@ randomok1()
 	X_end := (X1 + W) 
 	Y_end :=  (Y1 + H)
 	
-	TargetExists := FindClick("img\randomok1.png", Options, xCoord, ycoord)
+	TargetExists := FindClick("img\Botit20.png", Options, xCoord, ycoord)
 	if (TargetExists)
 	{
 		TrueX := (xCoord) - (X3)
@@ -504,7 +449,7 @@ randomok1()
 }
 
 
-levelup()
+BotIt13()
 {
 	
 	WinGetPos, X3, Y3, Width1, Height1, %targetwindow% 
@@ -515,7 +460,7 @@ levelup()
 	X_end := (X1 + W) 
 	Y_end :=  (Y1 + H)
 	
-	TargetExists := FindClick("img\up.png", Options, xCoord, ycoord)
+	TargetExists := FindClick("img\BotIt13.png", Options, xCoord, ycoord)
 	if (TargetExists)
 	{
 		TrueX := (xCoord) - (X3)
@@ -531,7 +476,7 @@ levelup()
 
 
 
-Randomlist()
+BotitRandomlist()
 
 {
 	Random, SleepAmount, 1450, 2250
@@ -548,7 +493,7 @@ Randomlist()
 	
 	
 	CoordMode, Pixel, Screen
-	TargetExists := FindClick("img\rndm\rnd1.png", Options, xCoord, ycoord)
+	TargetExists := FindClick("img\Random\Botitrnd1.png", Options, xCoord, ycoord)
 	if (TargetExists)
 	{
 		TrueX := (xCoord) - (X3)
@@ -557,7 +502,7 @@ Randomlist()
 		Sleep, %SleepAmount%		
 		return
 	}	
-	TargetExists := FindClick("img\rndm\rnd2.png", Options, xCoord, ycoord)
+	TargetExists := FindClick("img\Random\Botitrnd2.png", Options, xCoord, ycoord)
 	if (TargetExists)
 	{
 		TrueX := (xCoord) - (X3)
@@ -566,7 +511,7 @@ Randomlist()
 		Sleep, %SleepAmount%		
 		return
 	}	
-	TargetExists := FindClick("img\rndm\rnd3.png", Options, xCoord, ycoord)
+	TargetExists := FindClick("img\Random\Botitrnd3.png", Options, xCoord, ycoord)
 	if (TargetExists)
 	{
 		TrueX := (xCoord) - (X3)
@@ -575,7 +520,7 @@ Randomlist()
 		Sleep, %SleepAmount%		
 		return
 	}	
-	TargetExists := FindClick("img\rndm\rnd4.png", Options, xCoord, ycoord)
+	TargetExists := FindClick("img\Random\Botitrnd4.png", Options, xCoord, ycoord)
 	if (TargetExists)
 	{
 		TrueX := (xCoord) - (X3)
@@ -584,7 +529,7 @@ Randomlist()
 		Sleep, %SleepAmount%		
 		return
 	}	
-	TargetExists := FindClick("img\rndm\rnd5.png", Options, xCoord, ycoord)
+	TargetExists := FindClick("img\Random\Botitrnd5.png", Options, xCoord, ycoord)
 	if (TargetExists)
 	{
 		TrueX := (xCoord) - (X3)
@@ -593,7 +538,7 @@ Randomlist()
 		Sleep, %SleepAmount%		
 		return
 	}	
-	TargetExists := FindClick("img\rndm\rnd6.png", Options, xCoord, ycoord)
+	TargetExists := FindClick("img\Random\Botitrnd6.png", Options, xCoord, ycoord)
 	if (TargetExists)
 	{
 		TrueX := (xCoord) - (X3)
@@ -602,7 +547,7 @@ Randomlist()
 		Sleep, %SleepAmount%		
 		return
 	}	
-	TargetExists := FindClick("img\rndm\rnd7.png", Options, xCoord, ycoord)
+	TargetExists := FindClick("img\Random\Botitrnd7.png", Options, xCoord, ycoord)
 	if (TargetExists)
 	{
 		TrueX := (xCoord) - (X3)
@@ -611,7 +556,7 @@ Randomlist()
 		Sleep, %SleepAmount%		
 		return
 	}	
-	TargetExists := FindClick("img\rndm\rnd8.png", Options, xCoord, ycoord)
+	TargetExists := FindClick("img\Random\Botitrnd8.png", Options, xCoord, ycoord)
 	if (TargetExists)
 	{
 		TrueX := (xCoord) - (X3)
@@ -620,7 +565,7 @@ Randomlist()
 		Sleep, %SleepAmount%		
 		return
 	}	
-	TargetExists := FindClick("img\rndm\rnd9.png", Options, xCoord, ycoord)
+	TargetExists := FindClick("img\Random\Botitrnd9.png", Options, xCoord, ycoord)
 	if (TargetExists)
 	{
 		TrueX := (xCoord) - (X3)
@@ -632,7 +577,8 @@ Randomlist()
 }	
 	
 	
-	Failsafe1()
+	
+	Botit21()
 	{
 		
 		WinGetPos, X3, Y3, Width1, Height1, %targetwindow% 
@@ -644,7 +590,7 @@ Randomlist()
 		Y_end :=  (Y1 + H)
 		
 		
-		TargetExists := FindClick("img\failsafe1.png", Options, xCoord, ycoord)
+		TargetExists := FindClick("img\Botit21.png", Options, xCoord, ycoord)
 		if (TargetExists)	
 		{
 			
@@ -654,10 +600,9 @@ Randomlist()
 				ControlClick2(TrueX, TrueY , targetwindow)
 				Sleep, %SleepAmount%
 				sleep, 35000
-				return
 			}	
 			
-			TargetExists := FindClick("img\failsafe2.png", Options, xCoord, ycoord)
+			TargetExists := FindClick("img\Botit22.png", Options, xCoord, ycoord)
 			if (TargetExists)	
 			{
 				TrueX := (xCoord) - (X3)
@@ -670,7 +615,8 @@ Randomlist()
 		}
 	}
 
-RandomTraincontrol()
+
+Botit16() ; back random story
 	{
 		WinGetPos, X3, Y3, Width1, Height1, %targetwindow% 
 		X1 := X3
@@ -680,15 +626,15 @@ RandomTraincontrol()
 		X_end := (X1 + W) 
 		Y_end :=  (Y1 + H)
 		
-		TargetExists := FindClick("img\12.png", Options, xCoord, ycoord)
+		TargetExists := FindClick("img\Botit12.png", Options, xCoord, ycoord)
 		if (TargetExists)
 		{
 			TrueX := (xCoord) - (X3)
 			TrueY := (ycoord)-(Y3) 
 			ControlClick2(TrueX, TrueY , targetwindow)
 			Sleep, %SleepAmount%
-			Sleep, 7000
-			TargetExists := FindClick("img\Botit13.png", Options, xCoord, ycoord)
+			Sleep, 10000
+			TargetExists := FindClick("img\Botit16.png", Options, xCoord, ycoord)
 			if (TargetExists)
 				
 			{
@@ -698,9 +644,9 @@ RandomTraincontrol()
 				return
 			}
 		}
-}
+	}
 
-Dragcontrol()
+Botit14()
 {
 	WinGetPos, X3, Y3, Width1, Height1, %targetwindow% 
 	X1 := X3
@@ -711,10 +657,11 @@ Dragcontrol()
 	Y_end :=  (Y1 + H1)
 	
 	
-	randomstart1()
+	Botit19()
+	
 	
 	CoordMode, Pixel, Screen	
-	ImageSearch, FoundX, FoundY, %X1%, %Y1%, %X_end%, %Y_end%, *75 img\randomstage1.png ;Main Story coop
+	ImageSearch, FoundX, FoundY, %X1%, %Y1%, %X_end%, %Y_end%, *75 img\Botit19.png ;Main Story coop
 	If ErrorLevel = 1
 		
 	{
@@ -729,7 +676,7 @@ Dragcontrol()
 			CoordMode, Pixel, Screen	
 			ImageSearch, FoundX, FoundY, %X1%, %Y1%, %X_end%, %Y_end%, *55 img\Botit15.png ;control point
 			If ErrorLevel = 0
-				Loop,3
+				Loop,4
 				{
 					DragY := FoundY + 600
 				;MsgBox, %DragY%
@@ -737,7 +684,7 @@ Dragcontrol()
 				;	MouseClick, Left , %FoundX%, %FoundY% , 2,,D , %targetwindow%
 					MouseMove, %FoundX%, %DragY% , 50
 					MouseMove, %FoundX%, %DragY% , 50
-					TargetExists := FindClick("img\randomstart1.png", Options, xCoord, ycoord)
+					TargetExists := FindClick("img\Botit19.png", Options, xCoord, ycoord)
 					if (TargetExists)
 					{
 						TrueX := (xCoord) - (X3)
@@ -749,7 +696,7 @@ Dragcontrol()
 						Sleep, %SleepAmount%		
 						return
 					}
-					return
+					sleep, 1000
 				}
 			
 		}

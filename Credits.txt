@@ -5,3 +5,5 @@ https://discord.gg/CUgnVpk  DISCORD
 
 Mirror by Scrcpy "Genymobile"
 https://github.com/Genymobile/scrcpy
+
+Designmodo - https://designmodo.com/      PolarisUI

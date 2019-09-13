@@ -41,7 +41,7 @@ Gui Add, Button, x158 y32 w49 h31 , &Pause
 Gui Add, Button, x222 y32 w49 h31, &Restart
 Gui Add, Link, x230 y102 w47 h19, <a href="https://discord.gg/CUgnVpk">Discord</a>
 Gui Add, Picture, x188 y90 w32 h32, Core\2.png
-Gui Show, w279 h126, Pokemon v0.4.7
+Gui Show, w279 h126, Pokemon v0.4.7.44
 Menu, Tray, Icon, Core\hoticon.png
 Return
 
@@ -63,15 +63,15 @@ If (menuChoice = "Levelup")
 		
 	{
 		
-		start()
+		Botit1()
 		Sleep, %SleepAmount%
 		GuiControl, 1:, MyProgress,%MyProgress%	
 		
-		eventselect()
+		Botit2()
 		Sleep, %SleepAmount%
 		GuiControl, 1:, MyProgress,%MyProgress%
 		
-		train1()
+		Botit3()
 		Sleep, %SleepAmount%
 		GuiControl, 1:, MyProgress,%MyProgress%
 		
@@ -79,14 +79,14 @@ If (menuChoice = "Levelup")
 		If (Gamechoice = "Normal")
 			
 		{
-			diffnormal()	
+			Botit9()	
 			GuiControl, 1:, MyProgress,%MyProgress%
 		}
 		Sleep, %SleepAmount%
 		If (Gamechoice = "Hard")
 			
 		{
-			diffhard()
+			Botit8()
 			GuiControl, 1:, MyProgress,%MyProgress%
 		}
 		
@@ -94,7 +94,7 @@ If (menuChoice = "Levelup")
 		If (Gamechoice = "Very Hard")
 			
 		{
-			diffverhard()	
+			Botit7()	
 			GuiControl, 1:, MyProgress,%MyProgress%
 		}
 		
@@ -105,48 +105,48 @@ If (menuChoice = "Levelup")
 			;Msgbox, %diffpick%
 			If ( diffpick = 1)
 			{
-				diffnormal()	
+				Botit9()	
 				GuiControl, 1:, MyProgress,%MyProgress%
 			}
 			
 			Sleep, %SleepAmount%
 			If ( diffpick = 2)
 			{
-				diffhard()
+				Botit8()
 				GuiControl, 1:, MyProgress,%MyProgress%
 			}
 			
 			Sleep, %SleepAmount%
 			If ( diffpick  = 3)
 			{
-				diffverhard()
+				Botit7()
 				GuiControl, 1:, MyProgress,%MyProgress%
 			}
 		}
 		
-		go()
+		Botit10()
 		Sleep, %SleepAmount%
 		GuiControl, 1:, MyProgress,%MyProgress%
 		
-		star()
+		Botit11()
 		Sleep, %SleepAmount%
 		GuiControl, 1:, MyProgress,%MyProgress%
 		
-		ok()
+		Botit12()
 		Sleep, %SleepAmount%
 		GuiControl, 1:, MyProgress,%MyProgress%
 		
 		
-		levelup()
+		BotIt13()
 		Sleep, %SleepAmount%
 		GuiControl, 1:, MyProgress,%MyProgress%
 		
-		;andomlist()
 		
-		;Failsafe1()
+		
+		
 		GuiControl, 1:, MyProgress,%MyProgress%
-		Randomlist()
-		Failsafe1()
+		BotitRandomlist()
+		Botit21()
 		
 		Sleep, %SleepAmount%
 		
@@ -162,14 +162,14 @@ If (menuChoice = "Strike")
 		
 		
 		GuiControl, 1:, MyProgress,%MyProgress%
-		start()
+		Botit1()
 		Sleep, %SleepAmount%
 		GuiControl, 1:, MyProgress,%MyProgress%
 		Sleep, %SleepAmount%
-		eventselect()
+		Botit2()
 		GuiControl, 1:, MyProgress,%MyProgress%
 		Sleep, %SleepAmount%
-		train2()
+		Botit4()
 		Sleep, %SleepAmount%
 		GuiControl, 1:, MyProgress,%MyProgress%
 		
@@ -177,7 +177,7 @@ If (menuChoice = "Strike")
 		If (Gamechoice = "Normal")
 			
 		{
-			diffnormal()
+			Botit9()
 			GuiControl, 1:, MyProgress,%MyProgress%
 			
 		}
@@ -185,7 +185,7 @@ If (menuChoice = "Strike")
 		If (Gamechoice = "Hard")
 			
 		{
-			diffhard()
+			Botit8()
 			GuiControl, 1:, MyProgress,%MyProgress%
 			
 		}
@@ -193,7 +193,7 @@ If (menuChoice = "Strike")
 		If (Gamechoice = "Very Hard")
 			
 		{
-			diffverhard()
+			Botit7()
 			GuiControl, 1:, MyProgress,%MyProgress%
 			
 		}
@@ -206,14 +206,14 @@ If (menuChoice = "Strike")
 			sleep,300	
 			If ( diffpick = 1)
 			{
-				diffnormal()
+				Botit9()
 				GuiControl, 1:, MyProgress,%MyProgress%
 				
 			}
 			sleep,300			
 			If ( diffpick = 2)
 			{
-				diffhard()
+				Botit8()
 				GuiControl, 1:, MyProgress,%MyProgress%
 				
 			}
@@ -221,7 +221,7 @@ If (menuChoice = "Strike")
 			sleep,300
 			If ( diffpick  = 3)
 			{
-				diffverhard()
+				Botit7()
 				GuiControl, 1:, MyProgress,%MyProgress%
 				
 			}
@@ -229,27 +229,27 @@ If (menuChoice = "Strike")
 		
 		GuiControl, 1:, MyProgress,%MyProgress%
 		
-		go()
+		Botit10()
 		Sleep, %SleepAmount%
 		GuiControl, 1:, MyProgress,%MyProgress%
 		Sleep, %SleepAmount%
-		star()
+		Botit11()
 		
 		GuiControl, 1:, MyProgress,%MyProgress%
 		Sleep, %SleepAmount%
-		ok()
+		Botit12()
 		
 		GuiControl, 1:, MyProgress,%MyProgress%
 		
-		levelup()
+		BotIt13()
 		Sleep, %SleepAmount%
 		GuiControl, 1:, MyProgress,%MyProgress%
 		
 		;Randoms
 		
-	;Randomlist()
-	     Failsafe1()
-		Randomlist()
+		
+	     Botit21()
+		BotitRandomlist()
 		
 		;Randoms end
 		
@@ -276,15 +276,15 @@ If (menuChoice = "Tech")
 		
 		GuiControl, 1:, MyProgress,%MyProgress%
 		
-		start()
+		Botit1()
 		Sleep, %SleepAmount%
 		GuiControl, 1:, MyProgress,%MyProgress%
 		
-		eventselect()
+		Botit2()
 		Sleep, %SleepAmount%
 		GuiControl, 1:, MyProgress,%MyProgress%
 		
-		train3()
+		Botit5()
 		Sleep, %SleepAmount%
 		GuiControl, 1:, MyProgress,%MyProgress%
 		
@@ -292,7 +292,7 @@ If (menuChoice = "Tech")
 		If (Gamechoice = "Normal")
 			
 		{
-			diffnormal()
+			Botit9()
 			GuiControl, 1:, MyProgress,%MyProgress%
 			
 		}
@@ -300,7 +300,7 @@ If (menuChoice = "Tech")
 		If (Gamechoice = "Hard")
 			
 		{
-			diffhard()
+			Botit8()
 			GuiControl, 1:, MyProgress,%MyProgress%
 			
 		}
@@ -308,7 +308,7 @@ If (menuChoice = "Tech")
 		If (Gamechoice = "Very Hard")
 			
 		{
-			diffverhard()
+			Botit7()
 			GuiControl, 1:, MyProgress,%MyProgress%
 			
 		}
@@ -321,14 +321,14 @@ If (menuChoice = "Tech")
 			sleep,300	
 			If ( diffpick = 1)
 			{
-				diffnormal()
+				Botit9()
 				GuiControl, 1:, MyProgress,%MyProgress%
 				
 			}
 			sleep,300			
 			If ( diffpick = 2)
 			{
-				diffhard()
+				Botit8()
 				GuiControl, 1:, MyProgress,%MyProgress%
 				
 			}
@@ -336,7 +336,7 @@ If (menuChoice = "Tech")
 			sleep,300
 			If ( diffpick  = 3)
 			{
-				diffverhard()
+				Botit7()
 				GuiControl, 1:, MyProgress,%MyProgress%
 				
 			}
@@ -344,27 +344,27 @@ If (menuChoice = "Tech")
 		
 		GuiControl, 1:, MyProgress,%MyProgress%
 		
-		go()
+		Botit10()
 		Sleep, %SleepAmount%
 		GuiControl, 1:, MyProgress,%MyProgress%
 		
-		star()
+		Botit11()
 		Sleep, %SleepAmount%
 		GuiControl, 1:, MyProgress,%MyProgress%
 		
-		ok()
+		Botit12()
 		Sleep, %SleepAmount%
 		GuiControl, 1:, MyProgress,%MyProgress%
 		
-		levelup()
+		BotIt13()
 		Sleep, %SleepAmount%
 		GuiControl, 1:, MyProgress,%MyProgress%
 		
 		;Randoms
 		
-	;Randomlist()
-		Failsafe1()
-		Randomlist()
+		
+		Botit21()
+		BotitRandomlist()
 		
 		;Randoms end
 		
@@ -388,15 +388,15 @@ If (menuChoice = "Support")
 	{
 		GuiControl, 1:, MyProgress,%MyProgress%
 		
-		start()
+		Botit1()
 		Sleep, %SleepAmount%
 		GuiControl, 1:, MyProgress,%MyProgress%
 		
-		eventselect()
+		Botit2()
 		Sleep, %SleepAmount%
 		GuiControl, 1:, MyProgress,%MyProgress%
 		
-		train4()
+		Botit6()
 		Sleep, %SleepAmount%
 		GuiControl, 1:, MyProgress,%MyProgress%
 		
@@ -404,7 +404,7 @@ If (menuChoice = "Support")
 		If (Gamechoice = "Normal")
 			
 		{
-			diffnormal()
+			Botit9()
 			GuiControl, 1:, MyProgress,%MyProgress%
 			
 		}
@@ -412,7 +412,7 @@ If (menuChoice = "Support")
 		If (Gamechoice = "Hard")
 			
 		{
-			diffhard()
+			Botit8()
 			GuiControl, 1:, MyProgress,%MyProgress%
 			
 		}
@@ -420,7 +420,7 @@ If (menuChoice = "Support")
 		If (Gamechoice = "Very Hard")
 			
 		{
-			diffverhard()
+			Botit7()
 			GuiControl, 1:, MyProgress,%MyProgress%
 			
 		}
@@ -433,14 +433,14 @@ If (menuChoice = "Support")
 			sleep,300	
 			If ( diffpick = 1)
 			{
-				diffnormal()
+				Botit9()
 				GuiControl, 1:, MyProgress,%MyProgress%
 				
 			}
 			sleep,300			
 			If ( diffpick = 2)
 			{
-				diffhard()
+				Botit8()
 				GuiControl, 1:, MyProgress,%MyProgress%
 				
 			}
@@ -448,7 +448,7 @@ If (menuChoice = "Support")
 			sleep,300
 			If ( diffpick  = 3)
 			{
-				diffverhard()
+				Botit7()
 				GuiControl, 1:, MyProgress,%MyProgress%
 				
 			}
@@ -456,27 +456,27 @@ If (menuChoice = "Support")
 		
 		GuiControl, 1:, MyProgress,%MyProgress%
 		
-		go()
+		Botit10()
 		Sleep, %SleepAmount%
 		GuiControl, 1:, MyProgress,%MyProgress%
 		
-		star()
+		Botit11()
 		Sleep, %SleepAmount%
 		GuiControl, 1:, MyProgress,%MyProgress%
 		
-		ok()
+		Botit12()
 		Sleep, %SleepAmount%
 		GuiControl, 1:, MyProgress,%MyProgress%
 		
-		levelup()
+		BotIt13()
 		Sleep, %SleepAmount%
 		GuiControl, 1:, MyProgress,%MyProgress%
 		
 		;Randoms
 		
-	;Randomlist()
-		Failsafe1()
-		Randomlist()
+		
+		Botit21()
+		BotitRandomlist()
 		
 		;Randoms end
 		
@@ -502,26 +502,26 @@ If (menuChoice = "Story COOP")
 	{
 		GuiControl, 1:, MyProgress,%MyProgress%
 		
-		start()
+		Botit1()
 		Sleep, %SleepAmount%
 		GuiControl, 1:, MyProgress,%MyProgress%
 		
-		eventselectrandom1() ;random1.png  coop
+		Botit17() ;random1.png  coop
 		Sleep, %SleepAmount%
 		GuiControl, 1:, MyProgress,%MyProgress%
 		
-		randomstage1()		;randomstage1.png story
+		Botit18()		;randomstage1.png story
 		Sleep, %SleepAmount%
 		GuiControl, 1:, MyProgress,%MyProgress%
 		
-		randomstart1() 
+		Botit19() 
 		Sleep, %SleepAmount%
 		GuiControl, 1:, MyProgress,%MyProgress%
 		
 		If (Gamechoice = "Normal")
 			
 		{
-			diffnormal()
+			Botit9()
 			GuiControl, 1:, MyProgress,%MyProgress%
 			
 		}
@@ -529,7 +529,7 @@ If (menuChoice = "Story COOP")
 		If (Gamechoice = "Hard")
 			
 		{
-			diffhard()
+			Botit8()
 			GuiControl, 1:, MyProgress,%MyProgress%
 			
 		}
@@ -537,7 +537,7 @@ If (menuChoice = "Story COOP")
 		If (Gamechoice = "Very Hard")
 			
 		{
-			diffverhard()
+			Botit7()
 			GuiControl, 1:, MyProgress,%MyProgress%
 			
 		}
@@ -550,14 +550,14 @@ If (menuChoice = "Story COOP")
 			sleep,300	
 			If ( diffpick = 1)
 			{
-				diffnormal()
+				Botit9()
 				GuiControl, 1:, MyProgress,%MyProgress%
 				
 			}
 			sleep,300			
 			If ( diffpick = 2)
 			{
-				diffhard()
+				Botit8()
 				GuiControl, 1:, MyProgress,%MyProgress%
 				
 			}
@@ -565,7 +565,7 @@ If (menuChoice = "Story COOP")
 			sleep,300
 			If ( diffpick  = 3)
 			{
-				diffverhard()
+				Botit7()
 				GuiControl, 1:, MyProgress,%MyProgress%
 				
 			}
@@ -575,32 +575,36 @@ If (menuChoice = "Story COOP")
 		
 		
 		
-		randomok1()
+		Botit20()
 		Sleep, %SleepAmount%
 		GuiControl, 1:, MyProgress,%MyProgress%
 		
-		go()
+		Botit10()
 		Sleep, %SleepAmount%
 		GuiControl, 1:, MyProgress,%MyProgress%
 		
-		star()
+		Botit11()
 		Sleep, %SleepAmount%
 		GuiControl, 1:, MyProgress,%MyProgress%
 		
-		ok()
+		Botit12()
 		Sleep, %SleepAmount%
 		GuiControl, 1:, MyProgress,%MyProgress%
 		
-		levelup()		
+		Botit12()
+		Sleep, %SleepAmount%
+		GuiControl, 1:, MyProgress,%MyProgress%
+		
+		BotIt13()		
 		Sleep, %SleepAmount%
 		
 		
 		GuiControl, 1:, MyProgress,%MyProgress%
 		
 		
-	;Randomlist()
-		Failsafe1()
-		Randomlist()
+		
+		Botit21()
+		BotitRandomlist()
 		
 		
 		
@@ -623,17 +627,17 @@ If (menuChoice = "Random Stage")
 		{
 			
 			GuiControl, 1:, MyProgress,%MyProgress%
-			start()
+			Botit1()
 			Sleep, %SleepAmount%
 			GuiControl, 1:, MyProgress,%MyProgress%
-			eventselect()
+			Botit2()
 			Sleep, %SleepAmount%
 			GuiControl, 1:, MyProgress,%MyProgress%
 			
 			If (Gamechoice = "Normal")
 				
 			{
-				diffnormal()
+				Botit9()
 				GuiControl, 1:, MyProgress,%MyProgress%
 				
 			}
@@ -641,7 +645,7 @@ If (menuChoice = "Random Stage")
 			If (Gamechoice = "Hard")
 				
 			{
-				diffhard()
+				Botit8()
 				GuiControl, 1:, MyProgress,%MyProgress%
 				
 			}
@@ -649,7 +653,7 @@ If (menuChoice = "Random Stage")
 			If (Gamechoice = "Very Hard")
 				
 			{
-				diffverhard()
+				Botit7()
 				GuiControl, 1:, MyProgress,%MyProgress%
 				
 			}
@@ -662,14 +666,14 @@ If (menuChoice = "Random Stage")
 				sleep,300	
 				If ( diffpick = 1)
 				{
-					diffnormal()
+					Botit9()
 					GuiControl, 1:, MyProgress,%MyProgress%
 					
 				}
 				sleep,300			
 				If ( diffpick = 2)
 				{
-					diffhard()
+					Botit8()
 					GuiControl, 1:, MyProgress,%MyProgress%
 					
 				}
@@ -677,7 +681,7 @@ If (menuChoice = "Random Stage")
 				sleep,300
 				If ( diffpick  = 3)
 				{
-					diffverhard()
+					Botit7()
 					GuiControl, 1:, MyProgress,%MyProgress%
 					
 				}
@@ -691,14 +695,14 @@ If (menuChoice = "Random Stage")
 				sleep,300	
 				If ( diffpick2 = 1)
 				{
-					train1()
+					Botit3()
 					GuiControl, 1:, MyProgress,%MyProgress%
 					
 				}
 				sleep,300			
 				If ( diffpick2 = 2)
 				{
-					train2()
+					Botit4()
 					GuiControl, 1:, MyProgress,%MyProgress%
 					
 				}
@@ -706,7 +710,7 @@ If (menuChoice = "Random Stage")
 				sleep,300
 				If ( diffpick2  = 3)
 				{
-					train3()
+					Botit5()
 					GuiControl, 1:, MyProgress,%MyProgress%
 					
 				}	
@@ -714,7 +718,7 @@ If (menuChoice = "Random Stage")
 				sleep,300
 				If ( diffpick2  = 4)
 				{
-					train4()
+					Botit6()
 					GuiControl, 1:, MyProgress,%MyProgress%
 					
 				}	
@@ -722,20 +726,23 @@ If (menuChoice = "Random Stage")
 			}
 			
 			
-			go()
+			Botit10()
 			Sleep, %SleepAmount%
 			GuiControl, 1:, MyProgress,%MyProgress%
-			star()
+			Botit11()
 			Sleep, %SleepAmount%
 			GuiControl, 1:, MyProgress,%MyProgress%
-			RandomTraincontrol()
+			Sleep, %SleepAmount%
+			GuiControl, 1:, MyProgress,%MyProgress%
+			Botit16()
 			Sleep, %SleepAmount%			
 			GuiControl, 1:, MyProgress,%MyProgress%
+			;Botit12()
 			
 			
 			
-			Failsafe1()
-			Randomlist()
+			Botit21()
+			BotitRandomlist()
 			
 			Sleep, %SleepAmount%
 			Sleep, %SleepAmount%
@@ -751,30 +758,30 @@ If (menuChoice = "COOP Drag")
 	{
 		GuiControl, 1:, MyProgress,%MyProgress%
 		
-		start()
+		Botit1()
 		Sleep, %SleepAmount%
 		GuiControl, 1:, MyProgress,%MyProgress%
 		
-		eventselectrandom1() ;random1.png  coop
+		Botit17() 
 		Sleep, %SleepAmount%
 		GuiControl, 1:, MyProgress,%MyProgress%
 		
-		randomstage1()		;randomstage1.png story
+		Botit18()		;randomstage1.png story
 		Sleep, %SleepAmount%
 		GuiControl, 1:, MyProgress,%MyProgress%
 		
-		randomstart1() 
+		Botit19() 
 		Sleep, %SleepAmount%
 		GuiControl, 1:, MyProgress,%MyProgress%
 		
-		Dragcontrol()
+		Botit14()
 		Sleep, %SleepAmount%
 		GuiControl, 1:, MyProgress,%MyProgress%
 		
 		If (Gamechoice = "Normal")
 			
 		{
-			diffnormal()
+			Botit9()
 			GuiControl, 1:, MyProgress,%MyProgress%
 			
 		}
@@ -782,7 +789,7 @@ If (menuChoice = "COOP Drag")
 		If (Gamechoice = "Hard")
 			
 		{
-			diffhard()
+			Botit8()
 			GuiControl, 1:, MyProgress,%MyProgress%
 			
 		}
@@ -790,7 +797,7 @@ If (menuChoice = "COOP Drag")
 		If (Gamechoice = "Very Hard")
 			
 		{
-			diffverhard()
+			Botit7()
 			GuiControl, 1:, MyProgress,%MyProgress%
 			
 		}
@@ -803,14 +810,14 @@ If (menuChoice = "COOP Drag")
 			sleep,300	
 			If ( diffpick = 1)
 			{
-				diffnormal()
+				Botit9()
 				GuiControl, 1:, MyProgress,%MyProgress%
 				
 			}
 			sleep,300			
 			If ( diffpick = 2)
 			{
-				diffhard()
+				Botit8()
 				GuiControl, 1:, MyProgress,%MyProgress%
 				
 			}
@@ -818,7 +825,7 @@ If (menuChoice = "COOP Drag")
 			sleep,300
 			If ( diffpick  = 3)
 			{
-				diffverhard()
+				Botit7()
 				GuiControl, 1:, MyProgress,%MyProgress%
 				
 			}
@@ -828,32 +835,32 @@ If (menuChoice = "COOP Drag")
 		
 		
 		
-		randomok1()
+		Botit20()
 		Sleep, %SleepAmount%
 		GuiControl, 1:, MyProgress,%MyProgress%
 		
-		go()
+		Botit10()
 		Sleep, %SleepAmount%
 		GuiControl, 1:, MyProgress,%MyProgress%
 		
-		star()
+		Botit11()
 		Sleep, %SleepAmount%
 		GuiControl, 1:, MyProgress,%MyProgress%
 		
-		ok()
+		Botit12()
 		Sleep, %SleepAmount%
 		GuiControl, 1:, MyProgress,%MyProgress%
 		
-		levelup()		
+		BotIt13()		
 		Sleep, %SleepAmount%
 		
 		
 		GuiControl, 1:, MyProgress,%MyProgress%
 		
 		
-	;Randomlist()
-		Failsafe1()
-		Randomlist()
+		
+		Botit21()
+		BotitRandomlist()
 		
 		
 		
