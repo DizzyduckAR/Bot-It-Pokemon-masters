@@ -1,3 +1,11 @@
+# Pokemon Masters Bot-It V0.4.94
+
+* Image background snanner (window can sit at the back covered by other window
+* You can now play pc game or netflix while bot in background
+* Faster scan
+* Lower ram
+
+
 # Pokemon Masters Bot-It v0.4.75
 
 For anyone who wanna move to 0.4.75 with old img dir.
