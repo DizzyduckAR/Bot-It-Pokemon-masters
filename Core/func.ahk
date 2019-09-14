@@ -4,10 +4,9 @@
 ; https://github.com/DizzyduckAR/AutoMirror/
 
 
-global targetwindow := "F2 to grab window" ;Window name
-global Random, SleepAmount, 1550, 2150
-global Options := "o75 n silent r" ; image miss % options 1-254 "o65"
-global Options2 := "o75 n silent r" ; image list miss % options 1-254 "o35"
+
+global Random, SleepAmount, 1000, 1750
+
 
 
 
@@ -17,26 +16,8 @@ global Options2 := "o75 n silent r" ; image list miss % options 1-254 "o35"
 Botit1()
 {
 	
-	WinGetPos, X3, Y3, Width1, Height1, %targetwindow% 
-	X1 := X3
-	Y1 := Y3
-	W1 := Width1
-	H1 := Height1
-	X_end := (X1 + W) 
-	Y_end :=  (Y1 + H)
-	
-	TargetExists := FindClick("img\Botit1.png", Options, xCoord, ycoord)
-	if (TargetExists)
-	{
-		TrueX := (xCoord) - (X3)
-		TrueY := (ycoord)-(Y3) 
-		
-		;MsgBox,  %xCoord% , %ycoord% %TrueX% %TrueY%
-		ControlClick2(TrueX, TrueY , targetwindow)
-		Sleep, %SleepAmount%		
-		return
-	}
-	
+	ImageSearch_BotitBGS(targetwindow, "img\Botit1.png", ByRef truex, ByRef truey)
+
 	
 }
 
@@ -46,23 +27,9 @@ Botit2()
 {
 	
 	
-	WinGetPos, X3, Y3, Width1, Height1, %targetwindow% 
-	X1 := X3
-	Y1 := Y3
-	W1 := Width1
-	H1 := Height1
-	X_end := (X1 + W) 
-	Y_end :=  (Y1 + H)
+	ImageSearch_BotitBGS(targetwindow, "img\Botit2.png", ByRef truex, ByRef truey)
 	
-	TargetExists := FindClick("img\Botit2.png", Options, xCoord, ycoord)
-	if (TargetExists)
-	{
-		TrueX := (xCoord) - (X3)
-		TrueY := (ycoord)-(Y3) 
-		ControlClick2(TrueX, TrueY , targetwindow)
-		Sleep, %SleepAmount%		
-		return
-	}
+	
 	
 }	
 
@@ -75,26 +42,8 @@ Botit17()
 {
 	
 	
-	WinGetPos, X3, Y3, Width1, Height1, %targetwindow% 
-	X1 := X3
-	Y1 := Y3
-	W1 := Width1
-	H1 := Height1
-	X_end := (X1 + W) 
-	Y_end :=  (Y1 + H)
-	
-	TargetExists := FindClick("img\Botit17.png ", Options, xCoord, ycoord)
-	if (TargetExists)
-	{
-		TrueX := (xCoord) - (X3)
-		TrueY := (ycoord)-(Y3) 
-		ControlClick2(TrueX, TrueY , targetwindow)
-		Sleep, %SleepAmount%		
-		return
-	}
-	
-	
-	
+	ImageSearch_BotitBGS(targetwindow, "img\Botit17.png", ByRef truex, ByRef truey)
+
 	
 }	
 
@@ -106,23 +55,8 @@ Botit3()
 {
 	
 	
-	WinGetPos, X3, Y3, Width1, Height1, %targetwindow% 
-	X1 := X3
-	Y1 := Y3
-	W1 := Width1
-	H1 := Height1
-	X_end := (X1 + W) 
-	Y_end :=  (Y1 + H)
-	
-	TargetExists := FindClick("img\Botit3.png", Options, xCoord, ycoord)
-	if (TargetExists)
-	{
-		TrueX := (xCoord) - (X3)
-		TrueY := (ycoord)-(Y3) 
-		ControlClick2(TrueX, TrueY , targetwindow)
-		Sleep, %SleepAmount%		
-		return
-	}	
+	ImageSearch_BotitBGS(targetwindow, "img\Botit3.png", ByRef truex, ByRef truey)
+
 	
 	
 }	
@@ -132,23 +66,8 @@ Botit6()
 {
 	
 	
-	WinGetPos, X3, Y3, Width1, Height1, %targetwindow% 
-	X1 := X3
-	Y1 := Y3
-	W1 := Width1
-	H1 := Height1
-	X_end := (X1 + W) 
-	Y_end :=  (Y1 + H)
+	ImageSearch_BotitBGS(targetwindow, "img\Botit6.png", ByRef truex, ByRef truey)
 	
-	TargetExists := FindClick("img\Botit6.png", Options, xCoord, ycoord)
-	if (TargetExists)
-	{
-		TrueX := (xCoord) - (X3)
-		TrueY := (ycoord)-(Y3) 
-		ControlClick2(TrueX, TrueY , targetwindow)
-		Sleep, %SleepAmount%		
-		return
-	}	
 	
 }	
 
@@ -157,23 +76,8 @@ Botit4()
 {
 	
 	
-	WinGetPos, X3, Y3, Width1, Height1, %targetwindow% 
-	X1 := X3
-	Y1 := Y3
-	W1 := Width1
-	H1 := Height1
-	X_end := (X1 + W) 
-	Y_end :=  (Y1 + H)
+	ImageSearch_BotitBGS(targetwindow, "img\Botit4.png", ByRef truex, ByRef truey)
 	
-	TargetExists := FindClick("img\Botit4.png", Options, xCoord, ycoord)
-	if (TargetExists)
-	{
-		TrueX := (xCoord) - (X3)
-		TrueY := (ycoord)-(Y3) 
-		ControlClick2(TrueX, TrueY , targetwindow)
-		Sleep, %SleepAmount%		
-		return
-	}
 	
 	
 }	
@@ -182,23 +86,7 @@ Botit5()
 {
 	
 	
-	WinGetPos, X3, Y3, Width1, Height1, %targetwindow% 
-	X1 := X3
-	Y1 := Y3
-	W1 := Width1
-	H1 := Height1
-	X_end := (X1 + W) 
-	Y_end :=  (Y1 + H)
-	
-	TargetExists := FindClick("img\Botit5.png", Options, xCoord, ycoord)
-	if (TargetExists)
-	{
-		TrueX := (xCoord) - (X3)
-		TrueY := (ycoord)-(Y3) 
-		ControlClick2(TrueX, TrueY , targetwindow)
-		Sleep, %SleepAmount%		
-		return
-	}
+	ImageSearch_BotitBGS(targetwindow, "img\Botit5.png", ByRef truex, ByRef truey)
 	
 	
 }	
@@ -209,23 +97,8 @@ Botit18()
 {
 	
 	
-	WinGetPos, X3, Y3, Width1, Height1, %targetwindow% 
-	X1 := X3
-	Y1 := Y3
-	W1 := Width1
-	H1 := Height1
-	X_end := (X1 + W) 
-	Y_end :=  (Y1 + H)
+	ImageSearch_BotitBGS(targetwindow, "img\Botit18.png", ByRef truex, ByRef truey)
 	
-	TargetExists := FindClick("img\Botit18.png", Options, xCoord, ycoord)
-	if (TargetExists)
-	{
-		TrueX := (xCoord) - (X3)
-		TrueY := (ycoord)-(Y3) 
-		ControlClick2(TrueX, TrueY , targetwindow)
-		Sleep, %SleepAmount%		
-		return
-	}
 	
 }	
 
@@ -236,23 +109,8 @@ Botit7()
 {
 	
 	
-	WinGetPos, X3, Y3, Width1, Height1, %targetwindow% 
-	X1 := X3
-	Y1 := Y3
-	W1 := Width1
-	H1 := Height1
-	X_end := (X1 + W) 
-	Y_end :=  (Y1 + H)
+	ImageSearch_BotitBGS(targetwindow, "img\Botit7.png", ByRef truex, ByRef truey)
 	
-	TargetExists := FindClick("img\Botit7.png", Options, xCoord, ycoord)
-	if (TargetExists)
-	{
-		TrueX := (xCoord) - (X3)
-		TrueY := (ycoord)-(Y3) 
-		ControlClick2(TrueX, TrueY , targetwindow)
-		Sleep, %SleepAmount%		
-		return
-	}
 	
 }	
 
@@ -262,23 +120,8 @@ Botit8()
 {
 	
 	
-	WinGetPos, X3, Y3, Width1, Height1, %targetwindow% 
-	X1 := X3
-	Y1 := Y3
-	W1 := Width1
-	H1 := Height1
-	X_end := (X1 + W) 
-	Y_end :=  (Y1 + H)
+	ImageSearch_BotitBGS(targetwindow, "img\Botit8.png", ByRef truex, ByRef truey)
 	
-	TargetExists := FindClick("img\Botit8.png", Options, xCoord, ycoord)
-	if (TargetExists)
-	{
-		TrueX := (xCoord) - (X3)
-		TrueY := (ycoord)-(Y3) 
-		ControlClick2(TrueX, TrueY , targetwindow)
-		Sleep, %SleepAmount%		
-		return
-	}
 	
 	
 	
@@ -290,23 +133,8 @@ Botit9()
 {
 	
 	
-	WinGetPos, X3, Y3, Width1, Height1, %targetwindow% 
-	X1 := X3
-	Y1 := Y3
-	W1 := Width1
-	H1 := Height1
-	X_end := (X1 + W) 
-	Y_end :=  (Y1 + H)
+	ImageSearch_BotitBGS(targetwindow, "img\Botit9.png", ByRef truex, ByRef truey)
 	
-	TargetExists := FindClick("img\Botit9.png", Options, xCoord, ycoord)
-	if (TargetExists)
-	{
-		TrueX := (xCoord) - (X3)
-		TrueY := (ycoord)-(Y3) 
-		ControlClick2(TrueX, TrueY , targetwindow)
-		Sleep, %SleepAmount%		
-		return
-	}	
 	
 	
 }	
@@ -318,23 +146,8 @@ Botit9()
 
 Botit12()
 {
-	WinGetPos, X3, Y3, Width1, Height1, %targetwindow% 
-	X1 := X3
-	Y1 := Y3
-	W1 := Width1
-	H1 := Height1
-	X_end := (X1 + W) 
-	Y_end :=  (Y1 + H)
+	ImageSearch_BotitBGS(targetwindow, "img\Botit12.png", ByRef truex, ByRef truey)
 	
-	TargetExists := FindClick("img\Botit12.png", Options, xCoord, ycoord)
-	if (TargetExists)
-	{
-		TrueX := (xCoord) - (X3)
-		TrueY := (ycoord)-(Y3) 
-		ControlClick2(TrueX, TrueY , targetwindow)
-		Sleep, %SleepAmount%		
-		return
-	}
 	
 	
 }
@@ -344,373 +157,209 @@ Botit12()
 Botit10()
 {
 	
-	
-	WinGetPos, X3, Y3, Width1, Height1, %targetwindow% 
-	X1 := X3
-	Y1 := Y3
-	W1 := Width1
-	H1 := Height1
-	X_end := (X1 + W) 
-	Y_end :=  (Y1 + H)
+	Sleep, %SleepAmount%	
+	ImageSearch_BotitBGSleep(targetwindow, "img\Botit10.png", ByRef truex, ByRef truey)
 	
 	
-	TargetExists := FindClick("img\Botit10.png", Options, xCoord, ycoord)
-	if (TargetExists)
+	
+}
+	
+	
+	Botit11()
 	{
-		TrueX := (xCoord) - (X3)
-		TrueY := (ycoord)-(Y3) 
-		ControlClick2(TrueX, TrueY , targetwindow)
-		Sleep, %SleepAmount%
-		sleep, 35000
-		return
+		
+		
+		ImageSearch_BotitBGS(targetwindow, "img\Botit11.png", ByRef truex, ByRef truey)
+		
+		
+		
 	}
 	
 	
 	
-}
-
-
-
-
-Botit11()
-{
 	
-	
-	WinGetPos, X3, Y3, Width1, Height1, %targetwindow% 
-	X1 := X3
-	Y1 := Y3
-	W1 := Width1
-	H1 := Height1
-	X_end := (X1 + W) 
-	Y_end :=  (Y1 + H)
-	
-	TargetExists := FindClick("img\Botit11.png", Options, xCoord, ycoord)
-	if (TargetExists)
+	Botit19()
 	{
-		TrueX := (xCoord) - (X3)
-		TrueY := (ycoord)-(Y3) 
-		ControlClick2(TrueX, TrueY , targetwindow)
-		Sleep, %SleepAmount%		
-		return
-	}	
-	
-	
-}
-
-
-
-
-Botit19()
-{
-	
-	WinGetPos, X3, Y3, Width1, Height1, %targetwindow% 
-	X1 := X3
-	Y1 := Y3
-	W1 := Width1
-	H1 := Height1
-	X_end := (X1 + W) 
-	Y_end :=  (Y1 + H)
-	
-	TargetExists := FindClick("img\Botit19.png", Options, xCoord, ycoord)
-	if (TargetExists)
-	{
-		TrueX := (xCoord) - (X3)
-		TrueY := (ycoord)-(Y3) 
-		ControlClick2(TrueX, TrueY , targetwindow)
-		Sleep, %SleepAmount%		
-		return
-	}
-	
-}
-
-
-
-Botit20()
-{
-	
-	WinGetPos, X3, Y3, Width1, Height1, %targetwindow% 
-	X1 := X3
-	Y1 := Y3
-	W1 := Width1
-	H1 := Height1
-	X_end := (X1 + W) 
-	Y_end :=  (Y1 + H)
-	
-	TargetExists := FindClick("img\Botit20.png", Options, xCoord, ycoord)
-	if (TargetExists)
-	{
-		TrueX := (xCoord) - (X3)
-		TrueY := (ycoord)-(Y3) 
-		ControlClick2(TrueX, TrueY , targetwindow)
-		Sleep, %SleepAmount%		
-		return
-	}
-	
-}
-
-
-BotIt13()
-{
-	
-	WinGetPos, X3, Y3, Width1, Height1, %targetwindow% 
-	X1 := X3
-	Y1 := Y3
-	W1 := Width1
-	H1 := Height1
-	X_end := (X1 + W) 
-	Y_end :=  (Y1 + H)
-	
-	TargetExists := FindClick("img\BotIt13.png", Options, xCoord, ycoord)
-	if (TargetExists)
-	{
-		TrueX := (xCoord) - (X3)
-		TrueY := (ycoord)-(Y3) 
-		ControlClick2(TrueX, TrueY , targetwindow)
-		Sleep, %SleepAmount%		
-		return
+		
+		ImageSearch_BotitBGS(targetwindow, "img\Botit19.png", ByRef truex, ByRef truey)
+		
+		
 	}
 	
 	
-}
-
-
-
-
-BotitRandomlist()
-
-{
-	Random, SleepAmount, 1450, 2250
-	Sleep, %SleepAmount%
 	
-	WinGetPos, X3, Y3, Width1, Height1, %targetwindow% 
-	X1 := X3
-	Y1 := Y3
-	W1 := Width1
-	H1 := Height1
-	X_end := (X1 + W) 
-	Y_end :=  (Y1 + H)
+	Botit20()
+	{
+		
+		ImageSearch_BotitBGS(targetwindow, "img\Botit20.png", ByRef truex, ByRef truey)
+		
+	}
 	
 	
-	
-	CoordMode, Pixel, Screen
-	TargetExists := FindClick("img\Random\Botitrnd1.png", Options, xCoord, ycoord)
-	if (TargetExists)
+	BotIt13()
 	{
-		TrueX := (xCoord) - (X3)
-		TrueY := (ycoord)-(Y3) 
-		ControlClick2(TrueX, TrueY , targetwindow)
-		Sleep, %SleepAmount%		
-		return
-	}	
-	TargetExists := FindClick("img\Random\Botitrnd2.png", Options, xCoord, ycoord)
-	if (TargetExists)
-	{
-		TrueX := (xCoord) - (X3)
-		TrueY := (ycoord)-(Y3) 
-		ControlClick2(TrueX, TrueY , targetwindow)
-		Sleep, %SleepAmount%		
-		return
-	}	
-	TargetExists := FindClick("img\Random\Botitrnd3.png", Options, xCoord, ycoord)
-	if (TargetExists)
-	{
-		TrueX := (xCoord) - (X3)
-		TrueY := (ycoord)-(Y3) 
-		ControlClick2(TrueX, TrueY , targetwindow)
-		Sleep, %SleepAmount%		
-		return
-	}	
-	TargetExists := FindClick("img\Random\Botitrnd4.png", Options, xCoord, ycoord)
-	if (TargetExists)
-	{
-		TrueX := (xCoord) - (X3)
-		TrueY := (ycoord)-(Y3) 
-		ControlClick2(TrueX, TrueY , targetwindow)
-		Sleep, %SleepAmount%		
-		return
-	}	
-	TargetExists := FindClick("img\Random\Botitrnd5.png", Options, xCoord, ycoord)
-	if (TargetExists)
-	{
-		TrueX := (xCoord) - (X3)
-		TrueY := (ycoord)-(Y3) 
-		ControlClick2(TrueX, TrueY , targetwindow)
-		Sleep, %SleepAmount%		
-		return
-	}	
-	TargetExists := FindClick("img\Random\Botitrnd6.png", Options, xCoord, ycoord)
-	if (TargetExists)
-	{
-		TrueX := (xCoord) - (X3)
-		TrueY := (ycoord)-(Y3) 
-		ControlClick2(TrueX, TrueY , targetwindow)
-		Sleep, %SleepAmount%		
-		return
-	}	
-	TargetExists := FindClick("img\Random\Botitrnd7.png", Options, xCoord, ycoord)
-	if (TargetExists)
-	{
-		TrueX := (xCoord) - (X3)
-		TrueY := (ycoord)-(Y3) 
-		ControlClick2(TrueX, TrueY , targetwindow)
-		Sleep, %SleepAmount%		
-		return
-	}	
-	TargetExists := FindClick("img\Random\Botitrnd8.png", Options, xCoord, ycoord)
-	if (TargetExists)
-	{
-		TrueX := (xCoord) - (X3)
-		TrueY := (ycoord)-(Y3) 
-		ControlClick2(TrueX, TrueY , targetwindow)
-		Sleep, %SleepAmount%		
-		return
-	}	
-	TargetExists := FindClick("img\Random\Botitrnd9.png", Options, xCoord, ycoord)
-	if (TargetExists)
-	{
-		TrueX := (xCoord) - (X3)
-		TrueY := (ycoord)-(Y3) 
-		ControlClick2(TrueX, TrueY , targetwindow)
-		Sleep, %SleepAmount%		
-		return
-	}		
-}	
+		
+		ImageSearch_BotitBGS(targetwindow, "img\Botit13.png", ByRef truex, ByRef truey)
+		
+		
+		
+	}
 	
 	
+	
+	
+	BotitRandomlist()
+	
+	{
+		
+		CoordMode, Pixel, Screen
+		IfExist, img\Random\Botitrnd1.png
+		{
+			ImageSearch_BotitBGS(targetwindow, "img\Random\Botitrnd1.png", ByRef truex, ByRef truey)
+			Sleep, 1000
+			
+		}
+		
+		IfExist, img\Random\Botitrnd2.png
+		{
+			ImageSearch_BotitBGS(targetwindow, "img\Random\Botitrnd2.png", ByRef truex, ByRef truey)
+			Sleep, 1000
+		}
+		
+		IfExist, img\Random\Botitrnd3.png
+		{
+			ImageSearch_BotitBGS(targetwindow, "img\Random\Botitrnd3.png", ByRef truex, ByRef truey)
+			Sleep, 1000
+		}
+		
+		IfExist, img\Random\Botitrnd4.png
+		{
+			ImageSearch_BotitBGS(targetwindow, "img\Random\Botitrnd4.png", ByRef truex, ByRef truey)
+			Sleep, 1000
+		}
+		
+		IfExist, img\Random\Botitrnd5.png
+		{
+			ImageSearch_BotitBGS(targetwindow, "img\Random\Botitrnd5.png", ByRef truex, ByRef truey)
+			Sleep, 1000
+		}
+		
+		IfExist, img\Random\Botitrnd6.png
+		{
+			ImageSearch_BotitBGS(targetwindow, "img\Random\Botitrnd6.png", ByRef truex, ByRef truey)
+			Sleep, 1000
+		}
+		
+		IfExist, img\Random\Botitrnd7.png
+		{	
+			ImageSearch_BotitBGS(targetwindow, "img\Random\Botitrnd7.png", ByRef truex, ByRef truey)
+			Sleep, 1000
+		}
+		
+		IfExist, img\Random\Botitrnd8.png
+		{
+			ImageSearch_BotitBGS(targetwindow, "img\Random\Botitrnd8.png", ByRef truex, ByRef truey)
+			Sleep, 1000
+		}
+		
+		IfExist, img\Random\Botitrnd9.png
+		{
+			ImageSearch_BotitBGS(targetwindow, "img\Random\Botitrnd9.png", ByRef truex, ByRef truey)
+			Sleep, 1000
+		}
+		
+	}
 	
 	Botit21()
 	{
 		
-		WinGetPos, X3, Y3, Width1, Height1, %targetwindow% 
-		X1 := X3
-		Y1 := Y3
-		W1 := Width1
-		H1 := Height1
-		X_end := (X1 + W) 
-		Y_end :=  (Y1 + H)
 		
 		
-		TargetExists := FindClick("img\Botit21.png", Options, xCoord, ycoord)
-		if (TargetExists)	
+		
+		Exist:=ImageSearch_BotitBGSleep(targetwindow, "img\Botit21.png", ByRef truex, ByRef truey)
+		if Exist
 		{
 			
-			{
-				TrueX := (xCoord) - (X3)
-				TrueY := (ycoord)-(Y3) 
-				ControlClick2(TrueX, TrueY , targetwindow)
-				Sleep, %SleepAmount%
-				sleep, 35000
-			}	
-			
-			TargetExists := FindClick("img\Botit22.png", Options, xCoord, ycoord)
-			if (TargetExists)	
-			{
-				TrueX := (xCoord) - (X3)
-				TrueY := (ycoord)-(Y3) 
-				ControlClick2(TrueX, TrueY , targetwindow)
-				Sleep, %SleepAmount%
-				return
-			}			
+			ControlClick2(truex, truey , targetwindow)
+			ImageSearch_BotitBGS(targetwindow, "img\Botit22.png", ByRef truex, ByRef truey)	
 			
 		}
 	}
 
 
-Botit16() ; back random story
-	{
-		WinGetPos, X3, Y3, Width1, Height1, %targetwindow% 
-		X1 := X3
-		Y1 := Y3
-		W1 := Width1
-		H1 := Height1
-		X_end := (X1 + W) 
-		Y_end :=  (Y1 + H)
-		
-		TargetExists := FindClick("img\Botit12.png", Options, xCoord, ycoord)
-		if (TargetExists)
-		{
-			TrueX := (xCoord) - (X3)
-			TrueY := (ycoord)-(Y3) 
-			ControlClick2(TrueX, TrueY , targetwindow)
-			Sleep, %SleepAmount%
-			Sleep, 10000
-			TargetExists := FindClick("img\Botit16.png", Options, xCoord, ycoord)
-			if (TargetExists)
-				
-			{
-				TrueX := (xCoord) - (X3)
-				TrueY := (ycoord)-(Y3) 
-				ControlClick2(TrueX, TrueY , targetwindow)
-				return
-			}
-		}
-	}
-
-Botit14()
+Botit16()
 {
-	WinGetPos, X3, Y3, Width1, Height1, %targetwindow% 
-	X1 := X3
-	Y1 := Y3
-	W1 := Width1
-	H1 := Height1
-	X_end := (X1 + W1) 
-	Y_end :=  (Y1 + H1)
-	
-	
-	Botit19()
-	
-	
-	CoordMode, Pixel, Screen	
-	ImageSearch, FoundX, FoundY, %X1%, %Y1%, %X_end%, %Y_end%, *75 img\Botit19.png ;Main Story coop
-	If ErrorLevel = 1
-		
+	Exist:=ImageSearch_BotitBGS(targetwindow, "img\Botit12.png", ByRef truex, ByRef truey)
+	if Exist	
 	{
-		;MsgBox,1
-		sleep,1500
+		Sleep, %SleepAmount%
+		sleep, 10000
+		ImageSearch_BotitBGS(targetwindow, "img\Botit16.png", ByRef truex, ByRef truey)	
+		
+	}
+	
+}	
+
+
+	Botit14()
+	{
+		WinGetPos, X3, Y3, Width1, Height1, targetwindow
+		X1 := X3
+		Y1 := Y3
+		W1 := Width1
+		H1 := Height1
+		X_end := (X1 + W1) 
+		Y_end :=  (Y1 + H1)
+		
+		
+		Botit19()
+		
+		
 		CoordMode, Pixel, Screen	
-		ImageSearch, FoundX, FoundY, %X1%, %Y1%, %X_end%, %Y_end%, *75 img\Botit14.png ;Main Story coop
-		If ErrorLevel = 0
+		ImageSearch, FoundX, FoundY, %X1%, %Y1%, %X_end%, %Y_end%, *75 img\Botit19.png ;Main Story coop
+		If ErrorLevel = 1
+			
 		{
-			;MsgBox,2
+		;MsgBox,1
 			sleep,1500
 			CoordMode, Pixel, Screen	
-			ImageSearch, FoundX, FoundY, %X1%, %Y1%, %X_end%, %Y_end%, *55 img\Botit15.png ;control point
+			ImageSearch, FoundX, FoundY, %X1%, %Y1%, %X_end%, %Y_end%, *75 img\Botit14.png ;Main Story coop
 			If ErrorLevel = 0
-				Loop,4
-				{
-					DragY := FoundY + 600
-				;MsgBox, %DragY%
-				     MouseClickDrag,L , %FoundX% ,%FoundY% ,%FoundX% ,%DragY% ,50, %targetwindow%
-				;	MouseClick, Left , %FoundX%, %FoundY% , 2,,D , %targetwindow%
-					MouseMove, %FoundX%, %DragY% , 50
-					MouseMove, %FoundX%, %DragY% , 50
-					TargetExists := FindClick("img\Botit19.png", Options, xCoord, ycoord)
-					if (TargetExists)
+			{
+			;MsgBox,2
+				sleep,1500
+				CoordMode, Pixel, Screen	
+				ImageSearch, FoundX, FoundY, %X1%, %Y1%, %X_end%, %Y_end%, *55 img\Botit15.png ;control point
+				If ErrorLevel = 0
+					Loop,4
 					{
-						TrueX := (xCoord) - (X3)
-						TrueY := (ycoord)-(Y3) 
-						
-						
-						;ControlClick5(TrueX, TrueY , targetwindow)
-						;ControlClick6(TrueX, DragY , targetwindow)
-						Sleep, %SleepAmount%		
-						return
-					}
-					sleep, 1000
-				}
+						DragY := FoundY + 600
 			
-		}
+						MouseClickDrag,L , %FoundX% ,%FoundY% ,%FoundX% ,%DragY% ,50, %targetwindow%
+						MouseMove, %FoundX%, %DragY% , 50
+						MouseMove, %FoundX%, %DragY% , 50
+					
+						sleep, 1000
+					}
+				
+			}
+			
+		}	
 		
-	}	
+	}
+	
+	BotItTest()
+	
+	{
+		ImageSearch_BotitBGS(targetwindow, "img\BotIt1.png", ByRef truex, ByRef truey)
+		sleep, 1000
+		
+	}
 	
 	
 	
 	
-	
-	
-	
-	
-}
-
-#Include Core\controlclick.ahk
-#Include Core\FindClick.ahk
+	#Include Core\BackgroundScanner.ahk
+	#Include Core\controlclick.ahk
+	#Include Core\Gdip_All.ahk
+	#Include Core\Gdip_ImageSearch.ahk

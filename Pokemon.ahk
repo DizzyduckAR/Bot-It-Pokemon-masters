@@ -18,14 +18,14 @@ SetWinDelay 1
 SetKeyDelay -1
 SetMouseDelay -1
 ;DetectHiddenWindows,On
-#SingleInstance force
+;#SingleInstance force
 ;#SingleInstance ignore
-;#SingleInstance off
+#SingleInstance off
 #NoTrayIcon
 
-Random, SleepAmount, 500, 750
+Random, SleepAmount, 750, 1750
 
-
+global targetwindow := "F2 to grab window" ;Window name
 
 
 
@@ -33,7 +33,7 @@ Random, SleepAmount, 500, 750
 Menu, Tray, Icon, Core\hoticon.png
 Gui Add, Text, x19 y4 w80 h19 +0x200, Target Window:
 Gui, Add, Edit, x100 y5 w100 h18 +0x200 vtargetwindow gsubmit_all, %targetwindow%
-Gui Add, DropDownList, x10 y71 w120  vmenuChoice gmenuItm , Levelup|Strike|Tech|Support|Story COOP|Random Stage|COOP Drag
+Gui Add, DropDownList, x10 y71 w120  vmenuChoice gmenuItm , Levelup|Strike|Tech|Support|Story COOP|Random Stage|COOP Drag|
 Gui Add, DropDownList, x10 y41 w120 vGamechoice Choose1 , Normal||Hard|Very Hard|Random RAGE|
 Gui Add, Text, x10 y22 w36 h20 +0x200, Mode
 Gui Add, Progress, vMyProgress x10 y102 w120 h20 -Smooth  10,0
@@ -41,7 +41,7 @@ Gui Add, Button, x158 y32 w49 h31 , &Pause
 Gui Add, Button, x222 y32 w49 h31, &Restart
 Gui Add, Link, x230 y102 w47 h19, <a href="https://discord.gg/CUgnVpk">Discord</a>
 Gui Add, Picture, x188 y90 w32 h32, Core\2.png
-Gui Show, w279 h126, Pokemon v0.4.7.45
+Gui Show, w279 h126, Pokemon v0.4.94
 Menu, Tray, Icon, Core\hoticon.png
 Return
 
@@ -61,7 +61,10 @@ If (menuChoice = "Levelup")
 	
 	Loop
 		
+	
 	{
+		
+		
 		
 		Botit1()
 		Sleep, %SleepAmount%
@@ -123,7 +126,8 @@ If (menuChoice = "Levelup")
 				GuiControl, 1:, MyProgress,%MyProgress%
 			}
 		}
-		
+		Sleep, %SleepAmount%
+		sleep, 1250
 		Botit10()
 		Sleep, %SleepAmount%
 		GuiControl, 1:, MyProgress,%MyProgress%
@@ -228,7 +232,8 @@ If (menuChoice = "Strike")
 		}
 		
 		GuiControl, 1:, MyProgress,%MyProgress%
-		
+		Sleep, %SleepAmount%
+		sleep, 1250
 		Botit10()
 		Sleep, %SleepAmount%
 		GuiControl, 1:, MyProgress,%MyProgress%
@@ -343,7 +348,8 @@ If (menuChoice = "Tech")
 		}
 		
 		GuiControl, 1:, MyProgress,%MyProgress%
-		
+		Sleep, %SleepAmount%
+		sleep, 1250
 		Botit10()
 		Sleep, %SleepAmount%
 		GuiControl, 1:, MyProgress,%MyProgress%
@@ -373,8 +379,8 @@ If (menuChoice = "Tech")
 		GuiControl, 1:, MyProgress,%MyProgress%
 		
 		
-		Random, SleepAmount, 1450, 2250
-		Sleep, %SleepAmount%
+		
+		
 		Sleep, %SleepAmount%
 		
 	}
@@ -455,7 +461,8 @@ If (menuChoice = "Support")
 		}
 		
 		GuiControl, 1:, MyProgress,%MyProgress%
-		
+		Sleep, %SleepAmount%
+		sleep, 1250
 		Botit10()
 		Sleep, %SleepAmount%
 		GuiControl, 1:, MyProgress,%MyProgress%
@@ -486,7 +493,7 @@ If (menuChoice = "Support")
 		
 		
 		
-		Sleep, %SleepAmount%
+		
 		Sleep, %SleepAmount%
 		
 		
@@ -576,11 +583,12 @@ If (menuChoice = "Story COOP")
 		
 		
 		Botit20()
-		Sleep, %SleepAmount%
 		GuiControl, 1:, MyProgress,%MyProgress%
-		
+		Sleep, %SleepAmount%
+		sleep, 1250
 		Botit10()
 		Sleep, %SleepAmount%
+		
 		GuiControl, 1:, MyProgress,%MyProgress%
 		
 		Botit11()
@@ -597,8 +605,6 @@ If (menuChoice = "Story COOP")
 		
 		BotIt13()		
 		Sleep, %SleepAmount%
-		
-		
 		GuiControl, 1:, MyProgress,%MyProgress%
 		
 		
@@ -608,7 +614,7 @@ If (menuChoice = "Story COOP")
 		
 		
 		
-		Sleep, %SleepAmount%
+		
 		Sleep, %SleepAmount%
 		
 	}
@@ -725,7 +731,8 @@ If (menuChoice = "Random Stage")
 				
 			}
 			
-			
+			Sleep, %SleepAmount%
+			sleep, 1250
 			Botit10()
 			Sleep, %SleepAmount%
 			GuiControl, 1:, MyProgress,%MyProgress%
@@ -838,7 +845,8 @@ If (menuChoice = "COOP Drag")
 		Botit20()
 		Sleep, %SleepAmount%
 		GuiControl, 1:, MyProgress,%MyProgress%
-		
+		Sleep, %SleepAmount%
+		sleep, 1250
 		Botit10()
 		Sleep, %SleepAmount%
 		GuiControl, 1:, MyProgress,%MyProgress%
@@ -875,6 +883,32 @@ If (menuChoice = "COOP Drag")
 
 
 
+;If (menuChoice = "Test")
+;{	
+;	MsgBox, Start Strike Course %Gamechoice%
+;	
+;	loop
+;		
+;	{
+;		BotItTest()
+;		Sleep, %SleepAmount%
+;		GuiControl, 1:, MyProgress,%MyProgress%
+;		
+;		Botit2()
+		
+;		sleep, 5000
+;	}
+;	
+;	
+;	
+;}
+	
+	
+	
+	
+	
+	
+	
 	
 	
 	IsPaused := false

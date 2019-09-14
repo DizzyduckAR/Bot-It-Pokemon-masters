@@ -7,3 +7,8 @@ Mirror by Scrcpy "Genymobile"
 https://github.com/Genymobile/scrcpy
 
 Designmodo - https://designmodo.com/      PolarisUI
+
+Gdip_ImageSearch()
+by MasterFocus - 02/APRIL/2013 00:30h BRT
+
+Gdip standard library v1.45 by tic (Tariq Porter) 07/09/11
