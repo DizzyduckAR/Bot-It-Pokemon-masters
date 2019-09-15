@@ -1,7 +1,7 @@
 #SingleInstance, Force
 #Persistent
 
-#Include core/Gdip_All.ahk
+
 
 
 ; Tray Menu

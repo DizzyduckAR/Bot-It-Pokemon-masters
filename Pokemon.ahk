@@ -23,7 +23,7 @@ SetMouseDelay -1
 #SingleInstance off
 #NoTrayIcon
 
-Random, SleepAmount, 750, 1750
+Random, SleepAmount, 750, 1550
 
 global targetwindow := "F2 to grab window" ;Window name
 
@@ -33,15 +33,16 @@ global targetwindow := "F2 to grab window" ;Window name
 Menu, Tray, Icon, Core\hoticon.png
 Gui Add, Text, x19 y4 w80 h19 +0x200, Target Window:
 Gui, Add, Edit, x100 y5 w100 h18 +0x200 vtargetwindow gsubmit_all, %targetwindow%
-Gui Add, DropDownList, x10 y71 w120  vmenuChoice gmenuItm , Levelup|Strike|Tech|Support|Story COOP|Random Stage|COOP Drag|
-Gui Add, DropDownList, x10 y41 w120 vGamechoice Choose1 , Normal||Hard|Very Hard|Random RAGE|
+Gui Add, DropDownList, x10 y91 w120  vmenuChoice gmenuItm , Levelup|Strike|Tech|Support|Story COOP|Random Stage|COOP Drag|
+Gui Add, DropDownList, x10 y61 w120 vGamechoice Choose1 , Normal||Hard|Very Hard|Random RAGE|
 Gui Add, Text, x10 y22 w36 h20 +0x200, Mode
-Gui Add, Progress, vMyProgress x10 y102 w120 h20 -Smooth  10,0
+Gui Add, Progress, vMyProgress x10 y132 w120 h20 -Smooth  10,0
 Gui Add, Button, x158 y32 w49 h31 , &Pause
 Gui Add, Button, x222 y32 w49 h31, &Restart
-Gui Add, Link, x230 y102 w47 h19, <a href="https://discord.gg/CUgnVpk">Discord</a>
-Gui Add, Picture, x188 y90 w32 h32, Core\2.png
-Gui Show, w279 h126, Pokemon v0.4.94
+Gui Add, Link, x230 y132 w47 h19, <a href="https://discord.gg/CUgnVpk">Discord</a>
+Gui Add, Picture, x188 y120 w32 h32, Core\2.png
+Gui Add, Button, x178 y85 w80 h23, BotItRND
+Gui Show, w279 h156, Pokemon v0.4.95
 Menu, Tray, Icon, Core\hoticon.png
 Return
 
@@ -890,82 +891,175 @@ If (menuChoice = "COOP Drag")
 ;	loop
 ;		
 ;	{
-;		BotItTest()
+;		;BotItTest()
 ;		Sleep, %SleepAmount%
 ;		GuiControl, 1:, MyProgress,%MyProgress%
 ;		
-;		Botit2()
-		
+;		Botit1()
+;		
 ;		sleep, 5000
 ;	}
 ;	
 ;	
 ;	
 ;}
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	IsPaused := false
-	
-	ButtonRestart:
-	Reload
-	return
-	
-	ButtonPause:
-	
-	if IsPaused
-	{
+
+
+
+
+
+
+
+
+
+IsPaused := false
+
+ButtonRestart:
+Reload
+return
+
+ButtonPause:
+
+if IsPaused
+{
 		Pause off
 		IsPaused := false
 		GuiControl,, PauseButton, Pause
-	}
-	
-	else
-		SetTimer, Pause, 10
-	return
-	
-	Pause:
-	SetTimer, Pause, off
-	IsPaused := true
-	GuiControl,, PauseButton, Unpause
-	Pause, on
-	return
-	
-	
-	
-	
-	
-	F2::
-	MouseGetPos,,,guideUnderCursor
-	WinGetTitle, Title, ahk_id %guideUnderCursor%
+}
+
+else
+	SetTimer, Pause, 10
+return
+
+Pause:
+SetTimer, Pause, off
+IsPaused := true
+GuiControl,, PauseButton, Unpause
+Pause, on
+return
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+F2::
+MouseGetPos,,,guideUnderCursor
+WinGetTitle, Title, ahk_id %guideUnderCursor%
 ;Msgbox, %Title%
-	GuiControl,,targetwindow, %Title%
-	Gosub,submit_all
-	Return
-	
-	MyProgress:
-	MyProgress ++
-	
-	Choose:
-	Gui,Submit, Nohide
+GuiControl,,targetwindow, %Title%
+Gosub,submit_all
+Return
+
+MyProgress:
+MyProgress ++
+
+Choose:
+Gui,Submit, Nohide
+return
+
+
+submit_all:
+Gui, Submit, Nohide
+return
+
+GuiEscape:
+GuiClose:
+ExitApp
+
+F8::ExitApp
+
+ButtonBotItRND:
+ScreenCapture(location:="clipboard")
+
+IfNotExist, img\Random\Botitrnd1.png
+{
+	SaveClipImgToFile("img\Random\Botitrnd1.png")
+Sleep, 3000
+MsgBox, Saved Botitrnd1.png
+}
+
+IfNotExist, img\Random\Botitrnd2.png	
+{	
+SaveClipImgToFile("img\Random\Botitrnd2.png")
+Sleep, 3000
+MsgBox, Saved Botitrnd2.png
+return
+}
+
+IfNotExist, img\Random\Botitrnd3.png	
+{	
+	SaveClipImgToFile("img\Random\Botitrnd3.png")
+	Sleep, 3000
+	MsgBox, Saved Botitrnd3.png
 	return
-	
-	
-	submit_all:
-	Gui, Submit, Nohide
+}
+
+IfNotExist, img\Random\Botitrnd4.png	
+{	
+	SaveClipImgToFile("img\Random\Botitrnd4.png")
+	Sleep, 3000
+	MsgBox, Saved Botitrnd4.png
 	return
-	
-	GuiEscape:
-	GuiClose:
-	ExitApp
-	
-	F8::ExitApp
-	
-	
-	
+}
+
+IfNotExist, img\Random\Botitrnd5.png	
+{	
+	SaveClipImgToFile("img\Random\Botitrnd5.png")
+	Sleep, 3000
+	MsgBox, Saved Botitrnd5.png
+	return
+}
+
+IfNotExist, img\Random\Botitrnd6.png	
+{	
+	SaveClipImgToFile("img\Random\Botitrnd6.png")
+	Sleep, 3000
+	MsgBox, Saved Botitrnd6.png
+	return
+}
+
+IfNotExist, img\Random\Botitrnd7.png	
+{	
+	SaveClipImgToFile("img\Random\Botitrnd7.png")
+	Sleep, 3000
+	MsgBox, Saved Botitrnd7.png
+	return
+}
+
+IfNotExist, img\Random\Botitrnd8.png	
+{	
+	SaveClipImgToFile("img\Random\Botitrnd8.png")
+	Sleep, 3000
+	MsgBox, Saved Botitrnd8.png
+	return
+}
+
+IfNotExist, img\Random\Botitrnd9.png	
+{	
+	SaveClipImgToFile("img\Random\Botitrnd9.png")
+	Sleep, 3000
+	MsgBox, Saved Botitrnd9.png
+	return
+}
+MsgBox, All botit Randoms are Full
+return
+
+SaveClipImgToFile(FileName) {
+	pToken := Gdip_Startup()
+	pBitmap := Gdip_CreateBitmapFromClipboard()
+	Gdip_SaveBitmapToFile(pBitmap, FileName)
+	Gdip_DisposeImage(pBitmap)
+	Gdip_Shutdown(pToken)
+}
+
+#Include Core\Clipper.ahk

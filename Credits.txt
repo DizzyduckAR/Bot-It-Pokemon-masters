@@ -12,3 +12,5 @@ Gdip_ImageSearch()
 by MasterFocus - 02/APRIL/2013 00:30h BRT
 
 Gdip standard library v1.45 by tic (Tariq Porter) 07/09/11
+
+By SKAN,  Created : 19-Jul-2012
