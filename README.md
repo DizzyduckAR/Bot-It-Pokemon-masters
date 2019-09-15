@@ -1,3 +1,13 @@
+# Pokemon Masters Bot-It V0.4.95
+No gray scale yet. still failing
+
+* Ghost click are gone.
+* All files will now be check if exist before screenshot the mirror.
+* Added extra true/false check to make sure we only click if img found is true.
+* Adding file check system for Botitrnd. it will check for the first open Botitrnd1-9 and save (no more renaming)
+* Added Botitrnd to main gui
+* Bot it not scan the target from bottom up. this will save us time scanning in total (its working very good now) no more 20 secs ok
+
 # Pokemon Masters Bot-It V0.4.94
 
 * Image background snanner (window can sit at the back covered by other window
