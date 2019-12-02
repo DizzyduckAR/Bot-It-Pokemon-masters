@@ -2,5 +2,5 @@
 0.5.7
 https://www.patreon.com/AutoMirror
 https://www.youtube.com/watch?v=HfCmzwuIwl0
-https://github.com/DizzyduckAR/Bot-It-Pokemon-masters/raw/master/Pokemon.exe
+https://github.com/DizzyduckAR/Bot-It-Pokemon-masters/raw/master/BotIt_Pokemon_Masters_0.4.9.6.zip
 https://raw.githubusercontent.com/DizzyduckAR/Bot-It-Pokemon-masters/master/Update.txt
